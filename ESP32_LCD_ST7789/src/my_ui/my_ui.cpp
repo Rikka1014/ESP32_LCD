@@ -53,6 +53,8 @@ void my_disp_flush( lv_display_t *disp, const lv_area_t *area, uint8_t * px_map)
 }
 
 void my_ui_init(void) {
+    randomSeed(analogRead(0));  // 初始化随机数种子
+
     Serial.println("UI init start");
     // 初始化屏幕驱动
     SPI.begin(TFT_SCLK, -1, TFT_MOSI, TFT_CS);
@@ -93,4 +95,11 @@ void my_ui_update(void) {
     // 更新LVGL
     lv_task_handler();
     delay(5); // 延时以便处理任务
+    int i, j= 10;
+    i = random(0, 15); // 随机生成一个0-14之间的整数
+    j = random(0, 250); // 随机生成一个0-249之间的整数
+    ui_Screen1_screen_set_chart_valves(i, j); // 更新屏幕内容
+
+
+
 }

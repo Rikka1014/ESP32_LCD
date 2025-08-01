@@ -17,13 +17,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="creat: LVGL移植完成，测试正常">
-      <change afterPath="$PROJECT_DIR$/src/my_ui/my_ui.h" afterDir="false" />
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="creat: LVGL+SquareLine显示成功">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/ui.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +138,7 @@
       <workItem from="1753978415554" duration="3169000" />
       <workItem from="1754017982316" duration="1195000" />
       <workItem from="1754026903331" duration="4261000" />
-      <workItem from="1754033792098" duration="78000" />
+      <workItem from="1754033792098" duration="2264000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -160,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753981234663</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="creat: LVGL+SquareLine显示成功">
+      <option name="closed" value="true" />
+      <created>1754033970003</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754033970003</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +173,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creat: Adafruit_ST7789显示demo,正常" />
     <MESSAGE value="creat: LVGL移植完成，测试正常" />
-    <option name="LAST_COMMIT_MESSAGE" value="creat: LVGL移植完成，测试正常" />
+    <MESSAGE value="creat: LVGL+SquareLine显示成功" />
+    <option name="LAST_COMMIT_MESSAGE" value="creat: LVGL+SquareLine显示成功" />
   </component>
 </project>
