@@ -17,12 +17,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="creat: Adafruit_ST7789显示demo,正常">
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="creat: LVGL移植完成，测试正常">
+      <change afterPath="$PROJECT_DIR$/src/my_ui/my_ui.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ui.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/ui.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ui.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ui.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +95,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Code/LabHub/ESP32_LCD/ESP32_LCD_ST7789/.pio/libdeps/esp32s3usbotg",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -114,10 +116,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ESP32_LCD_ST7789" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
     </configuration>
     <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ESP32_LCD_ST7789" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
       <method v="2" />
@@ -134,7 +139,10 @@
       <option name="presentableId" value="Default" />
       <updated>1753968461320</updated>
       <workItem from="1753968462337" duration="9563000" />
-      <workItem from="1753978415554" duration="2743000" />
+      <workItem from="1753978415554" duration="3169000" />
+      <workItem from="1754017982316" duration="1195000" />
+      <workItem from="1754026903331" duration="4261000" />
+      <workItem from="1754033792098" duration="78000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -144,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753978923176</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="creat: LVGL移植完成，测试正常">
+      <option name="closed" value="true" />
+      <created>1753981234663</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1753981234663</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +168,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creat: Adafruit_ST7789显示demo,正常" />
-    <option name="LAST_COMMIT_MESSAGE" value="creat: Adafruit_ST7789显示demo,正常" />
+    <MESSAGE value="creat: LVGL移植完成，测试正常" />
+    <option name="LAST_COMMIT_MESSAGE" value="creat: LVGL移植完成，测试正常" />
   </component>
 </project>

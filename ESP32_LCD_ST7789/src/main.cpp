@@ -1,11 +1,11 @@
 #include <Arduino.h>
-#include "ui/ui.h"
+#include "my_ui/my_ui.h"
 
 void setup() {
     Serial.begin(115200);
-    ui_init();
+    my_ui_init();
 }
 
 void loop() {
-    ui_update();
+    my_ui_update();
 }
