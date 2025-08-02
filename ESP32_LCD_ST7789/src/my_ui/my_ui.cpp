@@ -94,7 +94,7 @@ void my_ui_init(void) {
 void my_ui_update(void) {
     // 更新LVGL
     lv_task_handler();
-    delay(5); // 延时以便处理任务
+    // delay(5); // 延时以便处理任务
     int i, j= 10;
     i = random(0, 15); // 随机生成一个0-14之间的整数
     j = random(0, 250); // 随机生成一个0-249之间的整数
