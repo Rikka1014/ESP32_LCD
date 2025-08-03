@@ -6,7 +6,7 @@
 #include "lvgl.h"
 #include <Arduino.h>
 #include <Adafruit_ST7789.h>
-#include <ui.h>
+// #include <ui.h>
 
 #define TFT_HOR_RES   240   // 屏幕宽度
 #define TFT_VER_RES   240   // 屏幕高度
@@ -86,7 +86,7 @@ void my_ui_init(void) {
 
     Serial.println("UI initialized");
 
-    ui_init(); // 初始化 SquareLine Studio 生成的 UI
+    // ui_init(); // 初始化 SquareLine Studio 生成的 UI
 }
 
 
@@ -98,7 +98,7 @@ void my_ui_update(void) {
     int i, j= 10;
     i = random(0, 15); // 随机生成一个0-14之间的整数
     j = random(0, 250); // 随机生成一个0-249之间的整数
-    ui_Screen1_screen_set_chart_valves(i, j); // 更新屏幕内容
+    // ui_Screen1_screen_set_chart_valves(i, j); // 更新屏幕内容
 
 
 

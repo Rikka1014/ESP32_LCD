@@ -1,11 +1,11 @@
 
-This directory is intended for project specific (private) libraries.
-PlatformIO will compile them to static libraries and link into the executable file.
+此目录用于特定于项目的（私有）库。
+PlatformIO 会将它们编译为静态库并链接到可执行文件中。
 
-The source code of each library should be placed in a separate directory
-("lib/your_library_name/[Code]").
+每个库的源代码应放置在单独的目录中
+（“lib/your_library_name/[代码]”）。
 
-For example, see the structure of the following example libraries `Foo` and `Bar`:
+例如，请参阅以下示例库“Foo”和“Bar”的结构：
 
 |--lib
 |  |
@@ -27,7 +27,7 @@ For example, see the structure of the following example libraries `Foo` and `Bar
 |--src
    |- main.c
 
-Example contents of `src/main.c` using Foo and Bar:
+使用 Foo 和 Bar 的 'src/main.c' 内容示例：
 ```
 #include <Foo.h>
 #include <Bar.h>
@@ -39,8 +39,8 @@ int main (void)
 
 ```
 
-The PlatformIO Library Dependency Finder will find automatically dependent
-libraries by scanning project source files.
+PlatformIO 库依赖项查找器将自动查找依赖项
+通过扫描项目源文件来存储库。
 
-More information about PlatformIO Library Dependency Finder
+有关 PlatformIO 库依赖项查找器的更多信息
 - https://docs.platformio.org/page/librarymanager/ldf.html
