@@ -10,6 +10,8 @@
             "includePath": [
                 "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/include",
                 "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/src",
+                "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib/custom",
+                "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib/generated",
                 "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib/lvgl",
                 "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib/lvgl/src",
                 "C:/Users/Rikka/.platformio/packages/framework-arduinoespressif32/libraries/SD/src",
@@ -256,6 +258,8 @@
                 "path": [
                     "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/include",
                     "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/src",
+                    "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib/custom",
+                    "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib/generated",
                     "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib/lvgl",
                     "n:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib/lvgl/src",
                     "C:/Users/Rikka/.platformio/packages/framework-arduinoespressif32/libraries/SD/src",
