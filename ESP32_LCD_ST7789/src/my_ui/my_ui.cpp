@@ -93,7 +93,18 @@ void my_ui_init(void) {
     setup_ui(&tft_ui); // 初始化 GUI Guider 生成的 UI
 }
 
-
+void my_ui_set_PC_status(const float cpu, const float gpu, const float ram, float fan)
+{
+    char buf[16];
+    snprintf(buf, sizeof(buf), "%.1f%%", cpu);
+    lv_label_set_text(tft_ui.screen_label_cpu, buf);
+    snprintf(buf, sizeof(buf), "%.1f%%", gpu);
+    lv_label_set_text(tft_ui.screen_label_gpu, buf);
+    snprintf(buf, sizeof(buf), "%.1f%%", ram);
+    lv_label_set_text(tft_ui.screen_label_ram, buf);
+    snprintf(buf, sizeof(buf), "%.0f RPM", fan);
+    lv_label_set_text(tft_ui.screen_label_fan, buf);
+}
 
 void my_ui_update(void) {
     // 更新LVGL
@@ -103,7 +114,6 @@ void my_ui_update(void) {
     // i = random(0, 15); // 随机生成一个0-14之间的整数
     // j = random(0, 250); // 随机生成一个0-249之间的整数
     // ui_Screen1_screen_set_chart_valves(i, j); // 更新屏幕内容
-
-
-
 }
+
+
