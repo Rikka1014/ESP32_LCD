@@ -20,9 +20,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="add: PC信息监控完成">
-      <change afterPath="$PROJECT_DIR$/src/my_ui/PC_keboard.py" afterDir="false" />
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="add: PC键盘监听+串口发送键值 py脚本">
+      <change afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/key/key.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/key/key.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_ArchitectsDaughter_23.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/PC_keboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PC_keboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,32 +136,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;PlatformIO.PlatformIO.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pc.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;PC__keyboard&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;N:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "PlatformIO.PlatformIO.executor": "Run",
+    "Python.PC_keboard (1).executor": "Run",
+    "Python.PC_keboard.executor": "Run",
+    "Python.pc.executor": "Run",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "PC__keyboard",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "N:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\lib" />
@@ -158,15 +172,43 @@
       <recent name="D:\Code\LabHub\ESP32_LCD\ESP32_LCD_ST7789\.pio\libdeps\esp32s3usbotg\lvgl" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src" />
       <recent name="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\lib" />
       <recent name="D:\Code\LabHub\ESP32_LCD\ESP32_LCD_ST7789\.pio\libdeps\esp32s3usbotg" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pc">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="jh" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.PC_keboard">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="PC_keboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ESP32_LCD_ST7789" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/my_ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\PC_keboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="pc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ESP32_LCD_ST7789" />
@@ -181,7 +223,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/my_ui/pc.py" />
+      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\pc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -263,10 +305,12 @@
     </configuration>
     <list>
       <item itemvalue="PlatformIO.PlatformIO" />
+      <item itemvalue="Python.PC_keboard" />
       <item itemvalue="Python.pc" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PC_keboard" />
         <item itemvalue="Python.pc" />
       </list>
     </recent_temporary>
@@ -293,7 +337,7 @@
       <workItem from="1754278290095" duration="16844000" />
       <workItem from="1754367893691" duration="2699000" />
       <workItem from="1754371422999" duration="240000" />
-      <workItem from="1754371680525" duration="1287000" />
+      <workItem from="1754371680525" duration="27775000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -367,7 +411,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754371290852</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add: PC键盘监听+串口发送键值 py脚本">
+      <option name="closed" value="true" />
+      <created>1754373352011</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754373352011</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,6 +444,7 @@
     <MESSAGE value="creat: LVGL+GUIGuider移植，暂未测试" />
     <MESSAGE value="creat: LVGL+GUIGuider移植，跑通" />
     <MESSAGE value="add: PC信息监控完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: PC信息监控完成" />
+    <MESSAGE value="add: PC键盘监听+串口发送键值 py脚本" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: PC键盘监听+串口发送键值 py脚本" />
   </component>
 </project>

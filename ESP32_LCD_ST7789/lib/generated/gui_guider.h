@@ -19,17 +19,20 @@ extern "C" {
 typedef struct
 {
   
-	lv_obj_t *screen;
-	bool screen_del;
-	lv_obj_t *screen_label_1;
-	lv_obj_t *screen_label_2;
-	lv_obj_t *screen_label_3;
-	lv_obj_t *screen_label_cpu;
-	lv_obj_t *screen_label_gpu;
-	lv_obj_t *screen_label_ram;
-	lv_obj_t *screen_label_log;
-	lv_obj_t *screen_label_FAN;
-	lv_obj_t *screen_label_fan;
+	lv_obj_t *screen_0;
+	bool screen_0_del;
+	lv_obj_t *screen_0_label_1;
+	lv_obj_t *screen_0_label_2;
+	lv_obj_t *screen_0_label_3;
+	lv_obj_t *screen_0_label_cpu;
+	lv_obj_t *screen_0_label_gpu;
+	lv_obj_t *screen_0_label_ram;
+	lv_obj_t *screen_0_label_log;
+	lv_obj_t *screen_0_label_FAN;
+	lv_obj_t *screen_0_label_fan;
+	lv_obj_t *screen_1;
+	bool screen_1_del;
+	lv_obj_t *screen_1_label_1;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -57,7 +60,8 @@ void init_keyboard(lv_ui *ui);
 extern lv_ui guider_ui;
 
 
-void setup_scr_screen(lv_ui *ui);
+void setup_scr_screen_0(lv_ui *ui);
+void setup_scr_screen_1(lv_ui *ui);
 
 LV_FONT_DECLARE(lv_font_Abel_regular_24)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)

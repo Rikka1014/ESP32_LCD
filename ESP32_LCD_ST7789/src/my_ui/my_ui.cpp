@@ -8,6 +8,7 @@
 #include <Adafruit_ST7789.h>
 // #include <ui.h>
 #include <gui_guider.h>
+#include <key/key.h>
 
 #define TFT_HOR_RES   240   // 屏幕宽度
 #define TFT_VER_RES   240   // 屏幕高度
@@ -26,7 +27,7 @@ uint32_t draw_buf[DRAW_BUF_SIZE / 4];
 
 Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 
-lv_ui tft_ui;   // 定义一个全局的 LVGL UI 结构体
+lv_ui guider_ui;   // 定义一个全局的 LVGL UI 结构体
 
 // LVGL系统时间获取的具体实现
 static uint32_t my_tick_get_cb(void) {
@@ -89,26 +90,30 @@ void my_ui_init(void) {
 
     Serial.println("UI initialized");
 
+    keypad_init();
+
     // ui_init(); // 初始化 SquareLine Studio 生成的 UI
-    setup_ui(&tft_ui); // 初始化 GUI Guider 生成的 UI
+    setup_ui(&guider_ui); // 初始化 GUI Guider 生成的 UI
 }
 
 void my_ui_set_PC_status(const float cpu, const float gpu, const float ram, float fan)
 {
     char buf[16];
     snprintf(buf, sizeof(buf), "%.1f%%", cpu);
-    lv_label_set_text(tft_ui.screen_label_cpu, buf);
+    lv_label_set_text(guider_ui.screen_0_label_cpu, buf);
     snprintf(buf, sizeof(buf), "%.1f%%", gpu);
-    lv_label_set_text(tft_ui.screen_label_gpu, buf);
+    lv_label_set_text(guider_ui.screen_0_label_gpu, buf);
     snprintf(buf, sizeof(buf), "%.1f%%", ram);
-    lv_label_set_text(tft_ui.screen_label_ram, buf);
+    lv_label_set_text(guider_ui.screen_0_label_ram, buf);
     snprintf(buf, sizeof(buf), "%.0f RPM", fan);
-    lv_label_set_text(tft_ui.screen_label_fan, buf);
+    lv_label_set_text(guider_ui.screen_0_label_fan, buf);
 }
 
 void my_ui_update(void) {
     // 更新LVGL
     lv_task_handler();
+
+    key_serial_receive(Serial);
     // delay(5); // 延时以便处理任务
     // int i, j= 10;
     // i = random(0, 15); // 随机生成一个0-14之间的整数

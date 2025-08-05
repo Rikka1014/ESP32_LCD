@@ -1,6 +1,7 @@
 #include <Arduino.h>
 
 #include "gui_guider.h"
+#include "key/key.h"
 #include "my_ui/my_ui.h"
 #include "PC_DateReceive/uart_receive.h"
 
@@ -10,23 +11,26 @@ SystemStats stats;  // 用于存储接收到的系统状态数据
 void setup() {
     Serial.begin(115200);
     my_ui_init();
+    // keypad_init();
 }
 
 void loop() {
     my_ui_update();
 
-    // 累积串口数据（非阻塞）
-    receiver.update();
-    // 尝试非阻塞解析
-    if (receiver.tryParseStats(stats)) {
-        Serial.print("CPU: ");
-        Serial.print(stats.cpu);
-        Serial.print("%, GPU: ");
-        Serial.print(stats.gpu);
-        Serial.print("%, RAM: ");
-        Serial.print(stats.ram);
-        Serial.println("MB");
+    // key_serial_receive(Serial);
 
-        my_ui_set_PC_status(stats.cpu, stats.gpu, stats.ram, stats.fan);   // 更新 UI 显示
-    }
+    // // 累积串口数据（非阻塞）
+    // receiver.update();
+    // // 尝试非阻塞解析
+    // if (receiver.tryParseStats(stats)) {
+    //     Serial.print("CPU: ");
+    //     Serial.print(stats.cpu);
+    //     Serial.print("%, GPU: ");
+    //     Serial.print(stats.gpu);
+    //     Serial.print("%, RAM: ");
+    //     Serial.print(stats.ram);
+    //     Serial.println("MB");
+    //
+    //     my_ui_set_PC_status(stats.cpu, stats.gpu, stats.ram, stats.fan);   // 更新 UI 显示
+    // }
 }
