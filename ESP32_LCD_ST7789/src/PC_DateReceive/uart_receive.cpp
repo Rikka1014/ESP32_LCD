@@ -23,7 +23,7 @@ void ESP32Receiver::update() {
         if (ch == '}') break;
     }
 }
-
+ 
 // extern lv_ui tft_ui;
 bool ESP32Receiver::tryParseStats(SystemStats &stats) {
     // 检查是否存在完整的 JSON 数据包

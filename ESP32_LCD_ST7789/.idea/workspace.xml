@@ -20,21 +20,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="add: PC键盘监听+串口发送键值 py脚本">
-      <change afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/key/key.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/key/key.h" afterDir="false" />
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="bug: 无法通过键盘切换页面">
+      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/events_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_ArchitectsDaughter_23.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui/PC_keboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/PC_keboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui/pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen_0.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen_0.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen_1.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen_1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PC_DateReceive/uart_receive.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/PC_DateReceive/uart_receive.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/key/key.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/key/key.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +77,18 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/ArduinoJson/src/ArduinoJson/Document/JsonDocument.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/ArduinoJson/src/ArduinoJson/compatibility.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/generated/gui_guider.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/generated/gui_guider.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/generated/setup_scr_screen.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/lv_conf.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/lvgl/src/widgets/label/lv_label.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/PC_DateReceive/uart_receive.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -183,9 +186,9 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.PC_keboard">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="PC_keboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -202,6 +205,50 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\PC_keboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PC_keboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ESP32_LCD_ST7789" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/my_ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\PC_keboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ESP32_LCD_ST7789" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/my_ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\pc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -303,6 +350,9 @@
     <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ESP32_LCD_ST7789" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
       <method v="2" />
     </configuration>
+    <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ESP32_LCD_ST7789" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="PlatformIO.PlatformIO" />
       <item itemvalue="Python.PC_keboard" />
@@ -337,7 +387,8 @@
       <workItem from="1754278290095" duration="16844000" />
       <workItem from="1754367893691" duration="2699000" />
       <workItem from="1754371422999" duration="240000" />
-      <workItem from="1754371680525" duration="27775000" />
+      <workItem from="1754371680525" duration="28211000" />
+      <workItem from="1754448522152" duration="10546000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -419,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754373352011</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="bug: 无法通过键盘切换页面">
+      <option name="closed" value="true" />
+      <created>1754412525050</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1754412525050</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,6 +504,7 @@
     <MESSAGE value="creat: LVGL+GUIGuider移植，跑通" />
     <MESSAGE value="add: PC信息监控完成" />
     <MESSAGE value="add: PC键盘监听+串口发送键值 py脚本" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: PC键盘监听+串口发送键值 py脚本" />
+    <MESSAGE value="bug: 无法通过键盘切换页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug: 无法通过键盘切换页面" />
   </component>
 </project>

@@ -258,6 +258,29 @@ void setup_scr_screen_0(lv_ui *ui)
     lv_obj_set_style_pad_left(ui->screen_0_label_fan, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->screen_0_label_fan, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+    //Write codes screen_0_btn_1
+    ui->screen_0_btn_1 = lv_button_create(ui->screen_0);
+    lv_obj_set_pos(ui->screen_0_btn_1, 180, 128);
+    lv_obj_set_size(ui->screen_0_btn_1, 55, 29);
+    ui->screen_0_btn_1_label = lv_label_create(ui->screen_0_btn_1);
+    lv_label_set_text(ui->screen_0_btn_1_label, "Button");
+    lv_label_set_long_mode(ui->screen_0_btn_1_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->screen_0_btn_1_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->screen_0_btn_1, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->screen_0_btn_1_label, LV_PCT(100));
+
+    //Write style for screen_0_btn_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->screen_0_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->screen_0_btn_1, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->screen_0_btn_1, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->screen_0_btn_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->screen_0_btn_1, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->screen_0_btn_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->screen_0_btn_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_0_btn_1, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->screen_0_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->screen_0_btn_1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
     //The custom code of screen_0.
 
 
