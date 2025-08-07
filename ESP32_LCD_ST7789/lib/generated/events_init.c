@@ -19,26 +19,12 @@
 static void screen_0_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
-    LV_LOG_WARN("bscreen_0 event handler called: %d", code);
+    LV_LOG_WARN("screen_0_event_handler: %d", code);
     switch (code) {
     case LV_EVENT_KEY:
     {
+        LV_LOG_WARN("LV_EVENT_KEY");
         ui_load_scr_animation(&guider_ui, &guider_ui.screen_1, guider_ui.screen_1_del, &guider_ui.screen_0_del, setup_scr_screen_1, LV_SCR_LOAD_ANIM_NONE, 200, 200, false, true);
-        break;
-    }
-    default:
-        break;
-    }
-}
-
-static void screen_0_btn_1_event_handler (lv_event_t *e)
-{
-    lv_event_code_t code = lv_event_get_code(e);
-    LV_LOG_WARN("btn_1 event handler called: %d", code);
-    switch (code) {
-    case LV_EVENT_KEY:
-    {
-        lv_label_set_text(guider_ui.screen_0_btn_1_label, "X0");
         break;
     }
     default:
@@ -49,7 +35,6 @@ static void screen_0_btn_1_event_handler (lv_event_t *e)
 void events_init_screen_0 (lv_ui *ui)
 {
     lv_obj_add_event_cb(ui->screen_0, screen_0_event_handler, LV_EVENT_ALL, ui);
-    lv_obj_add_event_cb(ui->screen_0_btn_1, screen_0_btn_1_event_handler, LV_EVENT_ALL, ui);
 }
 
 static void screen_1_event_handler (lv_event_t *e)

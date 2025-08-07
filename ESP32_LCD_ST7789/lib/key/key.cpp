@@ -42,7 +42,7 @@ void my_keypad_read(lv_indev_t * indev, lv_indev_data_t * data)
     else
     {
         data->state = LV_INDEV_STATE_RELEASED;
-        LV_LOG_WARN("--RELEASED");
+        // LV_LOG_WARN("--RELEASED");
     }
 }
 

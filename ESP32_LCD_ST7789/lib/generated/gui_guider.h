@@ -30,8 +30,6 @@ typedef struct
 	lv_obj_t *screen_0_label_log;
 	lv_obj_t *screen_0_label_FAN;
 	lv_obj_t *screen_0_label_fan;
-	lv_obj_t *screen_0_btn_1;
-	lv_obj_t *screen_0_btn_1_label;
 	lv_obj_t *screen_1;
 	bool screen_1_del;
 	lv_obj_t *screen_1_label_1;
@@ -68,7 +66,6 @@ void setup_scr_screen_1(lv_ui *ui);
 LV_FONT_DECLARE(lv_font_Abel_regular_24)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_Antonio_Regular_26)
-LV_FONT_DECLARE(lv_font_montserratMedium_12)
 
 
 #ifdef __cplusplus
