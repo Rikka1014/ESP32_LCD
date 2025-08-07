@@ -30,7 +30,7 @@
 /**********************
  *  STATIC VARIABLES
  **********************/
-
+lv_group_t *group0, *group1; // 全局变量，用于存储 LVGL 的输入设备组
 /**
  * Create a demo application
  */
@@ -38,5 +38,7 @@
 void custom_init(lv_ui *ui)
 {
     /* Add your codes here */
+    group0 = lv_group_create();
+    group1 = lv_group_create();
 }
 

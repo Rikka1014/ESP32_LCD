@@ -16,6 +16,8 @@ extern "C" {
 #include "gui_guider.h"
 
 void custom_init(lv_ui *ui);
+extern lv_group_t *group0;
+extern lv_group_t *group1;
 
 #ifdef __cplusplus
 }

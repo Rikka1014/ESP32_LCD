@@ -1,7 +1,6 @@
 #include <Arduino.h>
 
 #include "gui_guider.h"
-#include "key/key.h"
 #include "my_ui/my_ui.h"
 #include "PC_DateReceive/uart_receive.h"
 
@@ -10,8 +9,9 @@ SystemStats stats;  // 用于存储接收到的系统状态数据
 
 void setup() {
     Serial.begin(115200);
+    pinMode(9, INPUT_PULLUP);
+    digitalWrite(9, HIGH);
     my_ui_init();
-    // keypad_init();
 }
 
 void loop() {

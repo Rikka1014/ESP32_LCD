@@ -8,7 +8,7 @@
 #include <Adafruit_ST7789.h>
 // #include <ui.h>
 #include <gui_guider.h>
-#include <key/key.h>
+#include <key.h>
 
 #define TFT_HOR_RES   240   // 屏幕宽度
 #define TFT_VER_RES   240   // 屏幕高度
@@ -90,10 +90,11 @@ void my_ui_init(void) {
 
     Serial.println("UI initialized");
 
-    keypad_init();
+
 
     // ui_init(); // 初始化 SquareLine Studio 生成的 UI
     setup_ui(&guider_ui); // 初始化 GUI Guider 生成的 UI
+    keypad_init();
 }
 
 void my_ui_set_PC_status(const float cpu, const float gpu, const float ram, float fan)
@@ -113,7 +114,7 @@ void my_ui_update(void) {
     // 更新LVGL
     lv_task_handler();
 
-    key_serial_receive(Serial);
+    // key_serial_receive(Serial);
     // delay(5); // 延时以便处理任务
     // int i, j= 10;
     // i = random(0, 15); // 随机生成一个0-14之间的整数
