@@ -8,6 +8,7 @@
 #include <Adafruit_ST7789.h>
 // #include <ui.h>
 #include <gui_guider.h>
+#include <custom.h>
 #include <key.h>
 
 #define TFT_HOR_RES   240   // 屏幕宽度
@@ -26,8 +27,6 @@ uint32_t draw_buf[DRAW_BUF_SIZE / 4];
 #define TFT_BL    18    // 背光引脚（如果有接线）
 
 Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
-
-lv_ui guider_ui;   // 定义一个全局的 LVGL UI 结构体
 
 // LVGL系统时间获取的具体实现
 static uint32_t my_tick_get_cb(void) {
@@ -57,8 +56,6 @@ void my_disp_flush( lv_display_t *disp, const lv_area_t *area, uint8_t * px_map)
 }
 
 void my_ui_init(void) {
-    randomSeed(analogRead(0));  // 初始化随机数种子
-
     Serial.println("UI init start");
     // 初始化屏幕驱动
     SPI.begin(TFT_SCLK, -1, TFT_MOSI, TFT_CS);
@@ -78,21 +75,10 @@ void my_ui_init(void) {
     lv_display_set_rotation(disp, TFT_ROTATION);
     lv_display_set_flush_cb(disp, my_disp_flush);
     lv_display_set_buffers(disp, draw_buf, NULL, sizeof(draw_buf), LV_DISPLAY_RENDER_MODE_PARTIAL);
-//    // 初始化输入设备
-//    lv_indev_t * indev = lv_indev_create();
-//    lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER); /*Touchpad should have POINTER type*/
-//    lv_indev_set_read_cb(indev, my_touchpad_read);
-    Serial.println("UI initialized 3");
-//    // 创建一个简单的标签
-//    lv_obj_t *label = lv_label_create(lv_screen_active());
-//    lv_label_set_text(label, "Hello Rikka, I'm Yuta!");
-//    lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
-
     Serial.println("UI initialized");
 
 
-
-    // ui_init(); // 初始化 SquareLine Studio 生成的 UI
+    custom_init(&guider_ui);
     setup_ui(&guider_ui); // 初始化 GUI Guider 生成的 UI
     keypad_init();
 }

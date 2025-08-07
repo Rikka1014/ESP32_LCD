@@ -19,11 +19,9 @@
 static void screen_0_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
-    LV_LOG_WARN("screen_0_event_handler: %d", code);
     switch (code) {
     case LV_EVENT_KEY:
     {
-        LV_LOG_WARN("LV_EVENT_KEY");
         ui_load_scr_animation(&guider_ui, &guider_ui.screen_1, guider_ui.screen_1_del, &guider_ui.screen_0_del, setup_scr_screen_1, LV_SCR_LOAD_ANIM_NONE, 200, 200, false, true);
         break;
     }

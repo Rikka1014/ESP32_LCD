@@ -31,6 +31,7 @@
  *  STATIC VARIABLES
  **********************/
 lv_group_t *group0, *group1; // 全局变量，用于存储 LVGL 的输入设备组
+lv_ui guider_ui;
 /**
  * Create a demo application
  */

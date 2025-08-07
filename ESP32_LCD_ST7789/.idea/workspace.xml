@@ -20,15 +20,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 按键可以正常触发事件。Group需要在任何实体输入设备/屏幕组件加入它之前就初始化创建好☆">
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 实体按键触发屏幕切换">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/custom/custom.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/custom/custom.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/custom/custom.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/custom/custom.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/events_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen_0.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen_0.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen_1.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen_1.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/key/key.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key/key.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -436,7 +435,7 @@
       <workItem from="1754371422999" duration="240000" />
       <workItem from="1754371680525" duration="28211000" />
       <workItem from="1754448522152" duration="33533000" />
-      <workItem from="1754533012266" duration="2738000" />
+      <workItem from="1754533012266" duration="10111000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -542,7 +541,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754535177768</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: 实体按键触发屏幕切换">
+      <option name="closed" value="true" />
+      <created>1754535923151</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1754535923151</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,6 +578,7 @@
     <MESSAGE value="bug: 无法通过键盘切换页面" />
     <MESSAGE value="bug: 实体按键绑定屏幕按钮实现页面切换" />
     <MESSAGE value="fix: 按键可以正常触发事件。Group需要在任何实体输入设备/屏幕组件加入它之前就初始化创建好☆" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 按键可以正常触发事件。Group需要在任何实体输入设备/屏幕组件加入它之前就初始化创建好☆" />
+    <MESSAGE value="fix: 实体按键触发屏幕切换" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 实体按键触发屏幕切换" />
   </component>
 </project>

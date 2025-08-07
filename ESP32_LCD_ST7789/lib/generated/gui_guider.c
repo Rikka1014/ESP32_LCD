@@ -10,8 +10,6 @@
 #include "lvgl.h"
 #include <stdio.h>
 #include "gui_guider.h"
-
-#include "custom.h"
 #include "widgets_init.h"
 
 void ui_init_style(lv_style_t * style)
@@ -85,7 +83,6 @@ void setup_bottom_layer(void)
 
 void setup_ui(lv_ui *ui)
 {
-    custom_init(ui);
     setup_bottom_layer();
     init_scr_del_flag(ui);
     init_keyboard(ui);

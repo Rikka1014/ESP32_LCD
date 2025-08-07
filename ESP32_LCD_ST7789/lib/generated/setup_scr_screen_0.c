@@ -261,6 +261,7 @@ void setup_scr_screen_0(lv_ui *ui)
     //The custom code of screen_0.
     lv_group_add_obj(group0, ui->screen_0);
 
+
     //Update current screen layout.
     lv_obj_update_layout(ui->screen_0);
 
