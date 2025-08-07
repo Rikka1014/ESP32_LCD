@@ -22,12 +22,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 实体按键触发屏幕切换">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/custom/custom.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/custom/custom.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/custom/custom.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/custom/custom.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen_0.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen_0.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/key/key.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key/key.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/key/key.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key/key.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,12 +181,56 @@
       <command value="jh" />
     </option>
   </component>
-  <component name="RunManager" selected="PlatformIO.PlatformIO">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="Python.PC_keboard (1)">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PC_keboard (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ESP32_LCD_ST7789" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/PC_keboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PC_keboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ESP32_LCD_ST7789" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/my_ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\PC_keboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="PC_keboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ESP32_LCD_ST7789" />
       <option name="ENV_FILES" value="" />
@@ -248,6 +289,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\PC_keboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ESP32_LCD_ST7789" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/my_ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\pc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -364,6 +427,9 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ESP32_LCD_ST7789" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
       <method v="2" />
     </configuration>
     <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ESP32_LCD_ST7789" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
@@ -401,11 +467,13 @@
     </configuration>
     <list>
       <item itemvalue="PlatformIO.PlatformIO" />
+      <item itemvalue="Python.PC_keboard (1)" />
       <item itemvalue="Python.PC_keboard" />
       <item itemvalue="Python.pc" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.PC_keboard (1)" />
         <item itemvalue="Python.PC_keboard" />
         <item itemvalue="Python.pc" />
       </list>
@@ -435,7 +503,8 @@
       <workItem from="1754371422999" duration="240000" />
       <workItem from="1754371680525" duration="28211000" />
       <workItem from="1754448522152" duration="33533000" />
-      <workItem from="1754533012266" duration="10111000" />
+      <workItem from="1754533012266" duration="10124000" />
+      <workItem from="1754573147079" duration="912000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -549,7 +618,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754535923151</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix: 实体按键触发屏幕切换">
+      <option name="closed" value="true" />
+      <created>1754559561683</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1754559561683</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
