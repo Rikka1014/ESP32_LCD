@@ -6,8 +6,6 @@
 
 void setup() {
     Serial.begin(115200);
-    pinMode(9, INPUT_PULLUP);
-    digitalWrite(9, HIGH);
     my_ui_init();
 }
 
