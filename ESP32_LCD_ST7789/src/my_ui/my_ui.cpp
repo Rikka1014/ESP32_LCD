@@ -68,36 +68,36 @@ void my_ui_init(void) {
     // digitalWrite(TFT_BL, HIGH);
     digitalWrite(TFT_BL, LOW);
 
-    tft.fillScreen(ST77XX_GREEN);   //
+//    // 测试屏幕使用
+//    tft.fillScreen(ST77XX_GREEN);   //
+//    tft.drawChar(25, 15, 'O', ST77XX_WHITE, ST77XX_WHITE, 1);
+//    tft.drawChar(35, 15, 'K', ST77XX_WHITE, ST77XX_WHITE, 1);
+//    tft.drawChar(45, 15, '!', ST77XX_BLUE, ST77XX_RED, 1);
+//    Serial.println("ST7735 initialized OK!");
 
-    tft.drawChar(25, 15, 'O', ST77XX_WHITE, ST77XX_WHITE, 1);
-    tft.drawChar(35, 15, 'K', ST77XX_WHITE, ST77XX_WHITE, 1);
-    tft.drawChar(45, 15, '!', ST77XX_BLUE, ST77XX_RED, 1);
-    Serial.println("ST7735 initialized OK!");
+    // 初始化LVGL
+    lv_init();
+    lv_tick_set_cb(my_tick_get_cb);
+#if LV_USE_LOG != 0
+    lv_log_register_print_cb(my_print);
+#endif
+    lv_display_t * disp;
+    disp = lv_display_create(TFT_HOR_RES, TFT_VER_RES);
+    lv_display_set_rotation(disp, TFT_ROTATION);
+    lv_display_set_flush_cb(disp, my_disp_flush);
+    lv_display_set_buffers(disp, draw_buf, NULL, sizeof(draw_buf), LV_DISPLAY_RENDER_MODE_PARTIAL);
+    Serial.println("UI initialized");
 
-//    // 初始化LVGL
-//    lv_init();
-//    lv_tick_set_cb(my_tick_get_cb);
-//#if LV_USE_LOG != 0
-//    lv_log_register_print_cb(my_print);
-//#endif
-//    lv_display_t * disp;
-//    disp = lv_display_create(TFT_HOR_RES, TFT_VER_RES);
-//    lv_display_set_rotation(disp, TFT_ROTATION);
-//    lv_display_set_flush_cb(disp, my_disp_flush);
-//    lv_display_set_buffers(disp, draw_buf, NULL, sizeof(draw_buf), LV_DISPLAY_RENDER_MODE_PARTIAL);
-//    Serial.println("UI initialized");
-//
-//
-//    custom_init(&guider_ui);
-//    setup_ui(&guider_ui); // 初始化 GUI Guider 生成的 UI
+
+    custom_init(&guider_ui);
+    setup_ui(&guider_ui); // 初始化 GUI Guider 生成的 UI
 //    keypad_init();
 }
 
 
 void my_ui_update(void) {
-//    // 更新LVGL
-//    lv_task_handler();
+    // 更新LVGL
+    lv_task_handler();
 
     delay(5); // 延时以便处理任务
 
