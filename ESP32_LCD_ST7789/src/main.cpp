@@ -17,8 +17,8 @@ void setup() {
 
 void loop() {
     my_ui_update();
-
-    key_serial_receive_loop(Serial);
+//
+//    key_serial_receive_loop(Serial);
 
     // // 累积串口数据（非阻塞）
     // receiver.update();

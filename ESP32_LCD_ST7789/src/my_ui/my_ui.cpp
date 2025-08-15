@@ -5,28 +5,29 @@
 #include "my_ui.h"
 #include "lvgl.h"
 #include <Arduino.h>
-#include <Adafruit_ST7789.h>
+//#include <Adafruit_ST7789.h>
+#include <Adafruit_ST7735.h>
 // #include <ui.h>
 #include <gui_guider.h>
 #include <custom.h>
 #include <key.h>
 
-#define TFT_HOR_RES   240   // 屏幕宽度
-#define TFT_VER_RES   240   // 屏幕高度
+#define TFT_HOR_RES   128   // 屏幕宽度
+#define TFT_VER_RES   128   // 屏幕高度
 #define TFT_ROTATION  LV_DISPLAY_ROTATION_180 // 屏幕旋转方向
 /*LVGL draw into this buffer, 1/10 screen size usually works well. The size is in bytes*/
 #define DRAW_BUF_SIZE (TFT_HOR_RES * TFT_VER_RES / 10 * (LV_COLOR_DEPTH / 8))
 uint32_t draw_buf[DRAW_BUF_SIZE / 4];
 
 // 定义引脚
-#define TFT_SCLK  10    // SPI时钟引脚
-#define TFT_MOSI  11    // SPI数据引脚
-#define TFT_RST   12    // 复位引脚
-#define TFT_DC    13    // 数据/命令选择引脚
-#define TFT_CS    14    // 片选引脚
-#define TFT_BL    18    // 背光引脚（如果有接线）
+#define TFT_SCLK  5    // SPI时钟引脚
+#define TFT_MOSI  4    // SPI数据引脚
+#define TFT_RST   -1    // 复位引脚
+#define TFT_DC    14    // 数据/命令选择引脚
+#define TFT_CS    10    // 片选引脚
+#define TFT_BL    13    // 背光引脚（如果有接线）
 
-Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
+Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
 // LVGL系统时间获取的具体实现
 static uint32_t my_tick_get_cb(void) {
@@ -59,11 +60,19 @@ void my_ui_init(void) {
     Serial.println("UI init start");
     // 初始化屏幕驱动
     SPI.begin(TFT_SCLK, -1, TFT_MOSI, TFT_CS);
-    tft.init(TFT_HOR_RES, TFT_VER_RES); // 分辨率
+//    tft.init(TFT_HOR_RES, TFT_VER_RES); // 分辨率
+    tft.initR(); // 分辨率
     tft.setRotation(TFT_ROTATION); // 旋转方向
     // 打开背光（如有接线）
     pinMode(TFT_BL, OUTPUT);
-    digitalWrite(TFT_BL, HIGH);
+//    digitalWrite(TFT_BL, HIGH);
+    digitalWrite(TFT_BL, LOW);
+
+    tft.fillScreen(ST77XX_GREEN);   //
+    delay(1000);
+
+    Serial.println("ST7735 initialized");
+
     // 初始化LVGL
     lv_init();
     lv_tick_set_cb(my_tick_get_cb);
@@ -78,22 +87,22 @@ void my_ui_init(void) {
     Serial.println("UI initialized");
 
 
-    custom_init(&guider_ui);
+//    custom_init(&guider_ui);
     setup_ui(&guider_ui); // 初始化 GUI Guider 生成的 UI
-    keypad_init();
+//    keypad_init();
 }
 
 void my_ui_set_PC_status(const float cpu, const float gpu, const float ram, float fan)
 {
     char buf[16];
     snprintf(buf, sizeof(buf), "%.1f%%", cpu);
-    lv_label_set_text(guider_ui.screen_0_label_cpu, buf);
-    snprintf(buf, sizeof(buf), "%.1f%%", gpu);
-    lv_label_set_text(guider_ui.screen_0_label_gpu, buf);
-    snprintf(buf, sizeof(buf), "%.1f%%", ram);
-    lv_label_set_text(guider_ui.screen_0_label_ram, buf);
-    snprintf(buf, sizeof(buf), "%.0f RPM", fan);
-    lv_label_set_text(guider_ui.screen_0_label_fan, buf);
+//    lv_label_set_text(guider_ui.screen_0_label_cpu, buf);
+//    snprintf(buf, sizeof(buf), "%.1f%%", gpu);
+//    lv_label_set_text(guider_ui.screen_0_label_gpu, buf);
+//    snprintf(buf, sizeof(buf), "%.1f%%", ram);
+//    lv_label_set_text(guider_ui.screen_0_label_ram, buf);
+//    snprintf(buf, sizeof(buf), "%.0f RPM", fan);
+//    lv_label_set_text(guider_ui.screen_0_label_fan, buf);
 }
 
 void my_ui_update(void) {
@@ -101,7 +110,7 @@ void my_ui_update(void) {
     lv_task_handler();
 
     // key_serial_receive(Serial);
-    // delay(5); // 延时以便处理任务
+     delay(5); // 延时以便处理任务
     // int i, j= 10;
     // i = random(0, 15); // 随机生成一个0-14之间的整数
     // j = random(0, 250); // 随机生成一个0-249之间的整数

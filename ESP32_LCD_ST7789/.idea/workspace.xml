@@ -22,9 +22,33 @@
   <component name="ChangeListManager">
     <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 实体按键触发屏幕切换">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/key/key.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key/key.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/key/key.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key/key.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/MicroPython/lv_font_Abel_regular_24.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/MicroPython/lv_font_Antonio_Regular_26.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/MicroPython/lv_font_montserratMedium_12.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/MicroPython/lv_font_montserratMedium_16.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/fs_driver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/generated.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/generated.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_customer_fonts/guider_customer_fonts.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_customer_fonts/guider_customer_fonts.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_customer_fonts/guider_customer_fonts.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_customer_fonts/guider_customer_fonts.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/guider_fonts.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/guider_fonts.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_Abel_regular_24.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_Antonio_Regular_26.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_montserratMedium_12.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_montserratMedium_12.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_montserratMedium_16.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_montserratMedium_16.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/images/images.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/images/images.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen_0.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen_1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/widgets_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/widgets_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/widgets_init.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/widgets_init.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lv_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lv_conf.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +75,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="PC_keyboard" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -135,34 +159,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;PlatformIO.PlatformIO.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PC_keboard (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.PC_keboard.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pc.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;PC__keyboard&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;N:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "PlatformIO.PlatformIO.executor": "Run",
+    "Python.PC_keboard (1).executor": "Run",
+    "Python.PC_keboard.executor": "Run",
+    "Python.pc.executor": "Run",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Tang__128x128__ST7735",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "N:/StudyAndProgress/ESP32_LCD/ESP32_LCD_ST7789/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\lib" />
@@ -181,10 +205,10 @@
       <command value="jh" />
     </option>
   </component>
-  <component name="RunManager" selected="Python.PC_keboard (1)">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="PlatformIO.PlatformIO">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="PC_keboard (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
