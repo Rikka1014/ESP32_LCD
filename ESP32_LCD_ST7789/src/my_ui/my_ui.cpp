@@ -22,7 +22,7 @@ uint32_t draw_buf[DRAW_BUF_SIZE / 4];
 // 定义引脚
 #define TFT_SCLK  5    // SPI时钟引脚
 #define TFT_MOSI  4    // SPI数据引脚
-#define TFT_RST   -1    // 复位引脚
+#define TFT_RST   9    // 复位引脚
 #define TFT_DC    14    // 数据/命令选择引脚
 #define TFT_CS    10    // 片选引脚
 #define TFT_BL    13    // 背光引脚（如果有接线）
@@ -87,34 +87,18 @@ void my_ui_init(void) {
     Serial.println("UI initialized");
 
 
-//    custom_init(&guider_ui);
+    custom_init(&guider_ui);
     setup_ui(&guider_ui); // 初始化 GUI Guider 生成的 UI
 //    keypad_init();
 }
 
-void my_ui_set_PC_status(const float cpu, const float gpu, const float ram, float fan)
-{
-    char buf[16];
-    snprintf(buf, sizeof(buf), "%.1f%%", cpu);
-//    lv_label_set_text(guider_ui.screen_0_label_cpu, buf);
-//    snprintf(buf, sizeof(buf), "%.1f%%", gpu);
-//    lv_label_set_text(guider_ui.screen_0_label_gpu, buf);
-//    snprintf(buf, sizeof(buf), "%.1f%%", ram);
-//    lv_label_set_text(guider_ui.screen_0_label_ram, buf);
-//    snprintf(buf, sizeof(buf), "%.0f RPM", fan);
-//    lv_label_set_text(guider_ui.screen_0_label_fan, buf);
-}
 
 void my_ui_update(void) {
     // 更新LVGL
     lv_task_handler();
 
-    // key_serial_receive(Serial);
-     delay(5); // 延时以便处理任务
-    // int i, j= 10;
-    // i = random(0, 15); // 随机生成一个0-14之间的整数
-    // j = random(0, 250); // 随机生成一个0-249之间的整数
-    // ui_Screen1_screen_set_chart_valves(i, j); // 更新屏幕内容
+    delay(5); // 延时以便处理任务
+
 }
 
 
