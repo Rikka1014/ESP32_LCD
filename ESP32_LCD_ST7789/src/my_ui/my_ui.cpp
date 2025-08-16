@@ -88,7 +88,7 @@ void my_ui_init(void) {
 
     custom_init(&guider_ui);
     setup_ui(&guider_ui); // 初始化 GUI Guider 生成的 UI
-//    keypad_init();
+    keypad_init();
 }
 
 

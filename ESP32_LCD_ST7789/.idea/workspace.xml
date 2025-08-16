@@ -22,14 +22,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="create: 240x240_ST7789,13好引脚无法控制为高电平，因此不能作为背光引脚">
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 新UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_Antonio_Regular_10.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_ArchitectsDaughter_16.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_montserratMedium_10.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/key/key.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key/key.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -890,7 +890,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755337442985</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fix: 新UI">
+      <option name="closed" value="true" />
+      <created>1755340322263</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1755340322263</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -901,7 +909,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="PC_keyboard" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -926,6 +946,7 @@
     <MESSAGE value="fix: LVGL新界面测试正常" />
     <MESSAGE value="fix: ①引入FreeRTOS②解决界面经常重启白屏的问题。" />
     <MESSAGE value="create: 240x240_ST7789,13好引脚无法控制为高电平，因此不能作为背光引脚" />
-    <option name="LAST_COMMIT_MESSAGE" value="create: 240x240_ST7789,13好引脚无法控制为高电平，因此不能作为背光引脚" />
+    <MESSAGE value="fix: 新UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 新UI" />
   </component>
 </project>

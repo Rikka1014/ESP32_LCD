@@ -5,11 +5,9 @@
 #include "my_ui/my_ui.h"
 #include "key.h"
 
-#define UI_TASK_STACK_SIZE 8192*2
+#define UI_TASK_STACK_SIZE 8192
 #define UI_TASK_PRIORITY   5
 TaskHandle_t ui_task_handle = nullptr;
-
-
 void ui_task(void *pvParameters) {
     (void) pvParameters;
 
@@ -26,6 +24,27 @@ void ui_task(void *pvParameters) {
     }
 }
 
+
+#define KEY_READ_TASK_STACK_SIZE 1024
+#define KEY_READ_TASK_PRIORITY   1
+TaskHandle_t key_read_task_handle = nullptr;
+
+
+void key_read_task(void *pvParameters) {
+    (void) pvParameters;
+
+    // 初始化按键
+    Serial.println("Keypad initialized");
+
+    while (true) {
+
+
+        Serial.print("keypad read: ");
+        Serial.println(analogRead(15));
+        vTaskDelay(pdMS_TO_TICKS(50));
+    }
+}
+
 void setup() {
     Serial.begin(115200);
     // while (!Serial) {}; // 等待串口准备好
@@ -39,6 +58,15 @@ void setup() {
             UI_TASK_PRIORITY,       // 任务优先级
             &ui_task_handle         // 任务句柄
     );
+    // // 创建按键读取任务
+    // xTaskCreate(
+    //         key_read_task,          // 任务函数
+    //         "Key Read Task",        // 任务名称
+    //         KEY_READ_TASK_STACK_SIZE, // 堆栈大小
+    //         nullptr,                // 任务参数
+    //         KEY_READ_TASK_PRIORITY, // 任务优先级
+    //         &key_read_task_handle   // 任务句柄
+    // );
 
 }
 

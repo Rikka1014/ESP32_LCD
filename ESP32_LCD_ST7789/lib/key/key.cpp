@@ -3,46 +3,25 @@
 #include "key.h"
 #include "custom.h"
 
-
+#define KEYPAD_PIN 15 // 模拟按键输入引脚
+#define KEYPAD_PIN_2 7 // 模拟按键输入引脚
 // 按键读取回调函数（需根据你的硬件实现）
 void my_keypad_read(lv_indev_t * indev, lv_indev_data_t * data)
 {
-    static bool key_pressed = false;
-    static int level_pre = HIGH;
-    int level = digitalRead(9);
 
-    if (level != level_pre)
+    if (analogRead(KEYPAD_PIN) < 2000)
     {
-        if (level == LOW)
-        {
-            key_pressed = true;
-        } else
-        {
-            key_pressed = false;
-        }
-        level_pre = level;
+        data->state = LV_INDEV_STATE_PRESSED;
+        data->key = LV_KEY_NEXT; // 这里可以根据实际按键设置不同的 key
     }
-
-    // if (g_key_pressed) {
-    //     data->state = LV_INDEV_STATE_PRESSED;
-    //     data->key = g_last_key;
-    //     g_key_pressed = false; // 只触发一次
-    //     // lv_label_set_text(guider_ui.screen_0_label_log, "LV_INDEV_STATE_PRESSED");
-    // }
-    // else {
-    //     data->state = LV_INDEV_STATE_RELEASED;
-    // }
-    if (key_pressed)
+    else if (digitalRead(KEYPAD_PIN_2) == LOW)
     {
         data->state = LV_INDEV_STATE_PRESSED;
         data->key = LV_KEY_ENTER;
-        key_pressed = false;
-        LV_LOG_WARN("PRESSED1");
     }
     else
     {
         data->state = LV_INDEV_STATE_RELEASED;
-        // LV_LOG_WARN("--RELEASED");
     }
 }
 
@@ -62,12 +41,15 @@ void my_uart_keypad_read(lv_indev_t * indev, lv_indev_data_t * data)
 
 void keypad_init(void)
 {
+    pinMode(KEYPAD_PIN, INPUT);
+    pinMode(KEYPAD_PIN_2, INPUT); // 设置为上拉输入
+
     static lv_indev_t * indev;
     indev = lv_indev_create(); // 创建一个输入设备
     lv_indev_set_type(indev, LV_INDEV_TYPE_KEYPAD); // 设置为键盘类型
-    lv_indev_set_read_cb(indev, my_uart_keypad_read);    // 设置读取回调函数
+    lv_indev_set_read_cb(indev, my_keypad_read);    // 设置读取回调函数
 
-    // 设置默认组
+    // 将KEYPAD与其要控制的组件添加到同一个组
     lv_indev_set_group(indev, group0);
 
 }
