@@ -22,13 +22,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: LVGL新界面测试正常">
-      <change beforePath="$PROJECT_DIR$/.idea/ESP32_LCD_ST7789.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ESP32_LCD_ST7789.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: ①引入FreeRTOS②解决界面经常重启白屏的问题。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -718,7 +716,7 @@
       <workItem from="1755273383318" duration="3348000" />
       <workItem from="1755314107573" duration="1065000" />
       <workItem from="1755315559742" duration="166000" />
-      <workItem from="1755315737759" duration="5778000" />
+      <workItem from="1755315737759" duration="7735000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -872,7 +870,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755278817897</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix: ①引入FreeRTOS②解决界面经常重启白屏的问题。">
+      <option name="closed" value="true" />
+      <created>1755321722741</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1755321722741</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -906,6 +912,7 @@
     <MESSAGE value="fix: 去除无用组件" />
     <MESSAGE value="fix: Adafruit_ST7735库测试屏幕显示正常" />
     <MESSAGE value="fix: LVGL新界面测试正常" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: LVGL新界面测试正常" />
+    <MESSAGE value="fix: ①引入FreeRTOS②解决界面经常重启白屏的问题。" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: ①引入FreeRTOS②解决界面经常重启白屏的问题。" />
   </component>
 </project>

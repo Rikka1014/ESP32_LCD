@@ -23,10 +23,14 @@ typedef struct
 	bool screen_del;
 	lv_obj_t *screen_label_1;
 	lv_obj_t *screen_label_2;
-	lv_obj_t *screen_label_3;
-	lv_obj_t *screen_label_4;
-	lv_obj_t *screen_label_5;
-	lv_obj_t *screen_label_6;
+	lv_obj_t *screen_label_;
+	lv_obj_t *screen_label_T_value;
+	lv_obj_t *screen_label_T_SET_value;
+	lv_obj_t *screen_label_FAN_value;
+	lv_obj_t *screen_btn_1;
+	lv_obj_t *screen_btn_1_label;
+	lv_obj_t *screen_btn_2;
+	lv_obj_t *screen_btn_2_label;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -56,8 +60,13 @@ extern lv_ui guider_ui;
 
 void setup_scr_screen(lv_ui *ui);
 
-LV_FONT_DECLARE(lv_font_Antonio_Regular_10)
+LV_FONT_DECLARE(lv_font_Alatsi_Regular_27)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
+LV_FONT_DECLARE(lv_font_Antonio_Regular_21)
+LV_FONT_DECLARE(lv_font_Adventpro_regular_25)
+LV_FONT_DECLARE(lv_font_Adventpro_regular_18)
+LV_FONT_DECLARE(lv_font_Adventpro_regular_24)
+LV_FONT_DECLARE(lv_font_montserratMedium_12)
 
 
 #ifdef __cplusplus
