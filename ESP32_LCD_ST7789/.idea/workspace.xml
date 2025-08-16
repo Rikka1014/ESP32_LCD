@@ -22,10 +22,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: ①引入FreeRTOS②解决界面经常重启白屏的问题。">
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="create: 240x240_ST7789,13好引脚无法控制为高电平，因此不能作为背光引脚">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/lv_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lv_conf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_Antonio_Regular_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_ArchitectsDaughter_16.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/lv_font_montserratMedium_10.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -878,7 +882,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755321722741</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="create: 240x240_ST7789,13好引脚无法控制为高电平，因此不能作为背光引脚">
+      <option name="closed" value="true" />
+      <created>1755337442985</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1755337442985</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -913,6 +925,7 @@
     <MESSAGE value="fix: Adafruit_ST7735库测试屏幕显示正常" />
     <MESSAGE value="fix: LVGL新界面测试正常" />
     <MESSAGE value="fix: ①引入FreeRTOS②解决界面经常重启白屏的问题。" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: ①引入FreeRTOS②解决界面经常重启白屏的问题。" />
+    <MESSAGE value="create: 240x240_ST7789,13好引脚无法控制为高电平，因此不能作为背光引脚" />
+    <option name="LAST_COMMIT_MESSAGE" value="create: 240x240_ST7789,13好引脚无法控制为高电平，因此不能作为背光引脚" />
   </component>
 </project>
