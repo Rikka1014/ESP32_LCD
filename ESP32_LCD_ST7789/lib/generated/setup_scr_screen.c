@@ -139,7 +139,7 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_TEMP_SET_VAL = lv_label_create(ui->screen);
     lv_obj_set_pos(ui->screen_label_TEMP_SET_VAL, 88, 57);
     lv_obj_set_size(ui->screen_label_TEMP_SET_VAL, 56, 31);
-    lv_label_set_text(ui->screen_label_TEMP_SET_VAL, "25 °");
+    lv_label_set_text(ui->screen_label_TEMP_SET_VAL, "25.6 °");
     lv_label_set_long_mode(ui->screen_label_TEMP_SET_VAL, LV_LABEL_LONG_WRAP);
 
     //Write style for screen_label_TEMP_SET_VAL, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -162,7 +162,7 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_TEMP_VAL = lv_label_create(ui->screen);
     lv_obj_set_pos(ui->screen_label_TEMP_VAL, 88, 13);
     lv_obj_set_size(ui->screen_label_TEMP_VAL, 56, 31);
-    lv_label_set_text(ui->screen_label_TEMP_VAL, "50 °");
+    lv_label_set_text(ui->screen_label_TEMP_VAL, "50.5 °");
     lv_label_set_long_mode(ui->screen_label_TEMP_VAL, LV_LABEL_LONG_WRAP);
 
     //Write style for screen_label_TEMP_VAL, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.

@@ -17,7 +17,6 @@ void ui_task(void *pvParameters) {
     my_ui_init();
     Serial.println("UI initialized");
 
-
     while (true) {
         my_ui_update();     // 更新UI
         vTaskDelay(pdMS_TO_TICKS(10)); // 每10毫秒更新一次UI
