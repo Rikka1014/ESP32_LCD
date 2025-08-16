@@ -14,7 +14,7 @@
 
 #define TFT_HOR_RES   128   // 屏幕宽度
 #define TFT_VER_RES   128   // 屏幕高度
-#define TFT_ROTATION  LV_DISPLAY_ROTATION_180 // 屏幕旋转方向
+#define TFT_ROTATION  LV_DISPLAY_ROTATION_0 // 屏幕旋转方向
 /*LVGL draw into this buffer, 1/10 screen size usually works well. The size is in bytes*/
 #define DRAW_BUF_SIZE (TFT_HOR_RES * TFT_VER_RES / 10 * (LV_COLOR_DEPTH / 8))
 uint32_t draw_buf[DRAW_BUF_SIZE / 4];
@@ -57,23 +57,23 @@ void my_disp_flush( lv_display_t *disp, const lv_area_t *area, uint8_t * px_map)
 }
 
 void my_ui_init(void) {
-    Serial.println("UI init start");
+    // 打开屏幕背光
+    pinMode(TFT_BL, OUTPUT);
+    digitalWrite(TFT_BL, LOW);
     // 初始化屏幕驱动
     SPI.begin(TFT_SCLK, -1, TFT_MOSI, TFT_CS);
+    vTaskDelay(pdMS_TO_TICKS(50)); // 等待SPI初始化完成
 //    tft.init(TFT_HOR_RES, TFT_VER_RES); // 分辨率
     tft.initR(); // 分辨率
     tft.setRotation(TFT_ROTATION); // 旋转方向
-    // 打开背光（如有接线）
-    pinMode(TFT_BL, OUTPUT);
-    // digitalWrite(TFT_BL, HIGH);
-    digitalWrite(TFT_BL, LOW);
 
-//    // 测试屏幕使用
-//    tft.fillScreen(ST77XX_GREEN);   //
-//    tft.drawChar(25, 15, 'O', ST77XX_WHITE, ST77XX_WHITE, 1);
-//    tft.drawChar(35, 15, 'K', ST77XX_WHITE, ST77XX_WHITE, 1);
-//    tft.drawChar(45, 15, '!', ST77XX_BLUE, ST77XX_RED, 1);
-//    Serial.println("ST7735 initialized OK!");
+
+    // // 测试屏幕使用
+    // tft.fillScreen(ST77XX_GREEN);   //
+    // tft.drawChar(25, 15, 'O', ST77XX_WHITE, ST77XX_WHITE, 1);
+    // tft.drawChar(35, 15, 'K', ST77XX_WHITE, ST77XX_WHITE, 1);
+    // tft.drawChar(45, 15, '!', ST77XX_BLUE, ST77XX_RED, 1);
+    // Serial.println("ST7735 initialized OK!");
 
     // 初始化LVGL
     lv_init();
@@ -86,7 +86,6 @@ void my_ui_init(void) {
     lv_display_set_rotation(disp, TFT_ROTATION);
     lv_display_set_flush_cb(disp, my_disp_flush);
     lv_display_set_buffers(disp, draw_buf, NULL, sizeof(draw_buf), LV_DISPLAY_RENDER_MODE_PARTIAL);
-    Serial.println("UI initialized");
 
 
     custom_init(&guider_ui);
@@ -98,9 +97,6 @@ void my_ui_init(void) {
 void my_ui_update(void) {
     // 更新LVGL
     lv_task_handler();
-
-    delay(5); // 延时以便处理任务
-
 }
 
 
