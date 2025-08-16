@@ -24,9 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: ①引入FreeRTOS②解决界面经常重启白屏的问题。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lv_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lv_conf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="PC_keyboard" />
+        <entry key="$PROJECT_DIR$/.." value="Tang_128x128_ST7735" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -148,7 +148,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "Tang__128x128__ST7735",
+    "git-widget-placeholder": "Tang__240x240__ST7789",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Code/LabHub/ESP32_LCD/ESP32_LCD_ST7789/lib",
     "node.js.detected.package.eslint": "true",

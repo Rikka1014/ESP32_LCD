@@ -5,7 +5,7 @@
 #include "my_ui/my_ui.h"
 #include "key.h"
 
-#define UI_TASK_STACK_SIZE 8192
+#define UI_TASK_STACK_SIZE 8192*2
 #define UI_TASK_PRIORITY   5
 TaskHandle_t ui_task_handle = nullptr;
 
