@@ -22,15 +22,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 加减T-set成功，需要在lv_conf.h中开启FLOAT使能，方可显示和打印小数">
-      <change afterPath="$PROJECT_DIR$/lib/temperature/temperature_sensor.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/temperature/temperature_sensor.h" afterDir="false" />
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 实现长按+-">
+      <change afterPath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/guider_fonts/fonts_list.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/temperature/temperature.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/temperature/temperature.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/key/key.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key/key.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/temperature/temperature.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/temperature/temperature.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/temperature/temperature_sensor.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/temperature/temperature_sensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +84,12 @@
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/Adafruit ST7735 and ST7789 Library/examples/rotationtest/rotationtest.ino" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/ArduinoJson/src/ArduinoJson/Document/JsonDocument.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/ArduinoJson/src/ArduinoJson/compatibility.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/DallasTemperature/DallasTemperature.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/OneWire/OneWire.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/Temperature/temperature.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/Temperature/temperature.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/Temperature/temperature_sensor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/custom/custom.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/custom/custom.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/generated/events_init.h" root0="FORCE_HIGHLIGHTING" />
@@ -96,10 +102,6 @@
     <setting file="file://$PROJECT_DIR$/lib/lvgl/src/core/lv_obj.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/lvgl/src/misc/lv_event.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/lvgl/src/widgets/label/lv_label.c" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/temperature/temperature.c" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/temperature/temperature.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/temperature/temperature_sensor.c" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/lib/temperature/temperature_sensor.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/my_ui/my_ui.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/my_ui/my_ui.h" root0="FORCE_HIGHLIGHTING" />
@@ -185,6 +187,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\LabHub\ESP32_LCD\ESP32_LCD_ST7789\lib" />
+      <recent name="D:\Code\LabHub\ESP32_LCD\ESP32_LCD_ST7789\src" />
       <recent name="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\lib" />
       <recent name="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src" />
       <recent name="D:\Code\LabHub\ESP32_LCD\ESP32_LCD_ST7789\.pio\libdeps\esp32s3usbotg" />
@@ -733,7 +736,7 @@
       <workItem from="1755315559742" duration="166000" />
       <workItem from="1755315737759" duration="7735000" />
       <workItem from="1755400386859" duration="2002000" />
-      <workItem from="1755403146526" duration="2317000" />
+      <workItem from="1755403146526" duration="10948000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -927,7 +930,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755364875249</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="fix: 实现长按+-">
+      <option name="closed" value="true" />
+      <created>1755405570589</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1755405570589</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -978,6 +989,7 @@
     <MESSAGE value="fix: 新UI" />
     <MESSAGE value="fix: 搞定按键导航焦点" />
     <MESSAGE value="fix: 加减T-set成功，需要在lv_conf.h中开启FLOAT使能，方可显示和打印小数" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 加减T-set成功，需要在lv_conf.h中开启FLOAT使能，方可显示和打印小数" />
+    <MESSAGE value="fix: 实现长按+-" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 实现长按+-" />
   </component>
 </project>

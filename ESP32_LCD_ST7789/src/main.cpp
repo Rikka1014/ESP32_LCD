@@ -4,9 +4,11 @@
 
 #include "my_ui/my_ui.h"
 #include "key.h"
+#include "temperature.h"
+#include "temperature_sensor.h"
 
 #define UI_TASK_STACK_SIZE 8192
-#define UI_TASK_PRIORITY   5
+#define UI_TASK_PRIORITY   4
 TaskHandle_t ui_task_handle = nullptr;
 void ui_task(void *pvParameters) {
     (void) pvParameters;
@@ -23,21 +25,28 @@ void ui_task(void *pvParameters) {
     }
 }
 
-
-#define TEMPERATURE_STACK_SIZE      1024
-#define TEMPERATURE_TASK_PRIORITY   1
+// 温度任务相关定义
+#define TEMPERATURE_STACK_SIZE      8192
+#define TEMPERATURE_TASK_PRIORITY   5
 TaskHandle_t temperature_task_handle = nullptr;
-
 
 void temperature_task(void *pvParameters) {
     (void) pvParameters;
 
-    // 初始化按键
+    // 初始化温度传感器
     Serial.println("temperature initialized");
+    temperature_sensor_init();
 
     while (true) {
-
-        vTaskDelay(pdMS_TO_TICKS(50));
+        float temperature;
+        bool ret = temperature_sensor_read_loop(&temperature);
+        if (ret) {
+            set_temperature(temperature); // 设置当前温度
+            Serial.printf("Current Temperature: %.2f°C\r\n", get_temperature());
+        } else {
+            Serial.printf("Failed to read temperature, error val: %.2f°C\r\n", temperature);
+        }
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
 
@@ -45,24 +54,24 @@ void setup() {
     Serial.begin(115200);
     // while (!Serial) {}; // 等待串口准备好
 
-    // 创建UI任务
-    xTaskCreate(
-            ui_task,                // 任务函数
-            "UI Task",              // 任务名称
-            UI_TASK_STACK_SIZE,     // 堆栈大小
-            nullptr,                // 任务参数
-            UI_TASK_PRIORITY,       // 任务优先级
-            &ui_task_handle         // 任务句柄
-    );
-    // // 创建按键读取任务
+    // // 创建UI任务
     // xTaskCreate(
-    //         key_read_task,          // 任务函数
-    //         "Key Read Task",        // 任务名称
-    //         KEY_READ_TASK_STACK_SIZE, // 堆栈大小
+    //         ui_task,                // 任务函数
+    //         "UI Task",              // 任务名称
+    //         UI_TASK_STACK_SIZE,     // 堆栈大小
     //         nullptr,                // 任务参数
-    //         KEY_READ_TASK_PRIORITY, // 任务优先级
-    //         &key_read_task_handle   // 任务句柄
+    //         UI_TASK_PRIORITY,       // 任务优先级
+    //         &ui_task_handle         // 任务句柄
     // );
+    // 创建温度任务
+    xTaskCreate(
+            temperature_task,           // 任务函数
+            "T Task",                   // 任务名称
+            TEMPERATURE_STACK_SIZE,     // 堆栈大小
+            nullptr,                    // 任务参数
+            TEMPERATURE_TASK_PRIORITY,  // 任务优先级
+            &temperature_task_handle    // 任务句柄
+    );
 
 }
 

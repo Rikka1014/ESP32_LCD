@@ -4,5 +4,9 @@
 
 #ifndef ESP32_LCD_ST7789_TEMPERATURE_SENSOR_H
 #define ESP32_LCD_ST7789_TEMPERATURE_SENSOR_H
+#include <Arduino.h>
+
+void temperature_sensor_init(void);
+bool temperature_sensor_read_loop(float *temperature);
 
 #endif //ESP32_LCD_ST7789_TEMPERATURE_SENSOR_H

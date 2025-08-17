@@ -5,11 +5,18 @@
 #ifndef KEY_H
 #define KEY_H
 
-#include <stdint.h>
-#include <stdbool.h>
+#include <Arduino.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 
 void keypad_init(void);
 void key_serial_receive_loop(HardwareSerial &serial);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //KEY_H
