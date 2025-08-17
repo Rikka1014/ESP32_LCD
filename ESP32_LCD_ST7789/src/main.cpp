@@ -24,22 +24,19 @@ void ui_task(void *pvParameters) {
 }
 
 
-#define KEY_READ_TASK_STACK_SIZE 1024
-#define KEY_READ_TASK_PRIORITY   1
-TaskHandle_t key_read_task_handle = nullptr;
+#define TEMPERATURE_STACK_SIZE      1024
+#define TEMPERATURE_TASK_PRIORITY   1
+TaskHandle_t temperature_task_handle = nullptr;
 
 
-void key_read_task(void *pvParameters) {
+void temperature_task(void *pvParameters) {
     (void) pvParameters;
 
     // 初始化按键
-    Serial.println("Keypad initialized");
+    Serial.println("temperature initialized");
 
     while (true) {
 
-
-        Serial.print("keypad read: ");
-        Serial.println(analogRead(15));
         vTaskDelay(pdMS_TO_TICKS(50));
     }
 }

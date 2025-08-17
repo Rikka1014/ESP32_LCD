@@ -12,10 +12,10 @@ typedef struct {
 
 extern TEMPERATURE g_temperature;
 
-float get_temperature();
-void set_temperature(float t);
-float get_temperature_set();
-void set_temperature_set(float t);
+float get_temperature();        // 获取当前温度
+void set_temperature(float t);  // 设置当前温度
+float get_temperature_set();    // 获取设定温度
+void set_temperature_set(float t);  // 设置设定温度
 
 
 #endif //ESP32_LCD_ST7789_TEMPERATURE_H

@@ -47,7 +47,13 @@ static void screen_btn_T_SET_sub_event_handler (lv_event_t *e)
     {
         set_temperature_set(get_temperature_set() - 1.0f);
         // LV_LOG_WARN("%.1f", get_temperature_set());
-        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f °", get_temperature_set());
+        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f°", get_temperature_set());
+        break;
+    }
+    case LV_EVENT_LONG_PRESSED_REPEAT:
+    {
+        set_temperature_set(get_temperature_set() - 1.0f);
+        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f°", get_temperature_set());
         break;
     }
     default:
@@ -66,8 +72,13 @@ static void screen_btn_T_SET_add_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     {
         set_temperature_set(get_temperature_set() + 1.0f);
-        // LV_LOG_WARN("%.1f", get_temperature_set());
-        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f °", get_temperature_set());
+        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f°", get_temperature_set());
+        break;
+    }
+    case LV_EVENT_LONG_PRESSED_REPEAT:
+    {
+        set_temperature_set(get_temperature_set() + 1.0f);
+        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f°", get_temperature_set());
         break;
     }
     default:

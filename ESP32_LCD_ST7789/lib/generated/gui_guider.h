@@ -61,9 +61,9 @@ extern lv_ui guider_ui;
 
 void setup_scr_screen(lv_ui *ui);
 
-LV_FONT_DECLARE(lv_font_Antonio_Regular_20)
+LV_FONT_DECLARE(lv_font_Antonio_Regular_25)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
-LV_FONT_DECLARE(lv_font_Antonio_Regular_24)
+LV_FONT_DECLARE(lv_font_Antonio_Regular_28)
 LV_FONT_DECLARE(lv_font_Antonio_Regular_12)
 LV_FONT_DECLARE(lv_font_Adventpro_regular_35)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)

@@ -1,1 +1,1 @@
-GEN_CSRCS += lv_font_Antonio_Regular_20.c lv_font_montserratMedium_16.c lv_font_Antonio_Regular_24.c lv_font_Antonio_Regular_12.c lv_font_Adventpro_regular_35.c lv_font_montserratMedium_12.c
+GEN_CSRCS += lv_font_Antonio_Regular_25.c lv_font_montserratMedium_16.c lv_font_Antonio_Regular_28.c lv_font_Antonio_Regular_12.c lv_font_Adventpro_regular_35.c lv_font_montserratMedium_12.c
