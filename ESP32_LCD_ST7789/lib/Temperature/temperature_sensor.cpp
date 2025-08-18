@@ -4,7 +4,7 @@
 #include "DallasTemperature.h"
 #include "temperature_sensor.h"
 
-#define DS18B20_PIN 21
+#define DS18B20_PIN 11
 OneWire one_wire(DS18B20_PIN);
 DallasTemperature DS18B20(&one_wire);
 
@@ -22,10 +22,10 @@ bool temperature_sensor_read_loop(float *temperature) {
     if (*temperature != DEVICE_DISCONNECTED_C) {
         ret = true;
     }
-    Serial.print("*temperature: ");
-    Serial.print(*temperature);
-    Serial.println(" C");
-    delay(500);
+    // Serial.print("*temperature: ");
+    // Serial.print(*temperature);
+    // Serial.println(" C");
+    // delay(500);
 
     return ret;
 }

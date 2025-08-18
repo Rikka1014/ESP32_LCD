@@ -9,7 +9,8 @@
 // #include <ui.h>
 #include <gui_guider.h>
 #include <custom.h>
-#include <key.h>
+#include "key.h"
+#include "temperature.h"
 
 #define TFT_HOR_RES   240   // 屏幕宽度
 #define TFT_VER_RES   240   // 屏幕高度
@@ -95,6 +96,15 @@ void my_ui_init(void) {
 void my_ui_update(void) {
     // 更新LVGL
     lv_task_handler();
+
+    // 读取温度传感器并更新温度显示
+    static float temperature_prev;
+    if (temperature_prev != get_temperature()) {
+        temperature_prev = get_temperature();
+        // Serial.printf("Temperature changed: %.2f\r\n", temperature_prev);
+        // 更新温度显示标签
+        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_VAL, "%.1f°", temperature_prev);
+    }
 }
 
 

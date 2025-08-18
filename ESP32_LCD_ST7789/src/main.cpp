@@ -54,15 +54,15 @@ void setup() {
     Serial.begin(115200);
     // while (!Serial) {}; // 等待串口准备好
 
-    // // 创建UI任务
-    // xTaskCreate(
-    //         ui_task,                // 任务函数
-    //         "UI Task",              // 任务名称
-    //         UI_TASK_STACK_SIZE,     // 堆栈大小
-    //         nullptr,                // 任务参数
-    //         UI_TASK_PRIORITY,       // 任务优先级
-    //         &ui_task_handle         // 任务句柄
-    // );
+    // 创建UI任务
+    xTaskCreate(
+            ui_task,                // 任务函数
+            "UI Task",              // 任务名称
+            UI_TASK_STACK_SIZE,     // 堆栈大小
+            nullptr,                // 任务参数
+            UI_TASK_PRIORITY,       // 任务优先级
+            &ui_task_handle         // 任务句柄
+    );
     // 创建温度任务
     xTaskCreate(
             temperature_task,           // 任务函数

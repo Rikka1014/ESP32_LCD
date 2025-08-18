@@ -22,16 +22,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 实现长按+-">
-      <change afterPath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" afterDir="false" />
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 温度计测试，未成功..">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/key/key.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key/key.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/temperature/temperature.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/temperature/temperature.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/temperature/temperature_sensor.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/temperature/temperature_sensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,9 +194,9 @@
     </option>
   </component>
   <component name="RunManager" selected="PlatformIO.PlatformIO">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="PC_keboard (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -736,7 +731,8 @@
       <workItem from="1755315559742" duration="166000" />
       <workItem from="1755315737759" duration="7735000" />
       <workItem from="1755400386859" duration="2002000" />
-      <workItem from="1755403146526" duration="10948000" />
+      <workItem from="1755403146526" duration="10978000" />
+      <workItem from="1755523302935" duration="2668000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -938,7 +934,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755405570589</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix: 温度计测试，未成功..">
+      <option name="closed" value="true" />
+      <created>1755414501458</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1755414501458</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -955,7 +959,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="PC_keyboard" />
+                        <option value="Tang_240x240_ST7789" />
                       </list>
                     </value>
                   </entry>
@@ -990,6 +994,7 @@
     <MESSAGE value="fix: 搞定按键导航焦点" />
     <MESSAGE value="fix: 加减T-set成功，需要在lv_conf.h中开启FLOAT使能，方可显示和打印小数" />
     <MESSAGE value="fix: 实现长按+-" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 实现长按+-" />
+    <MESSAGE value="fix: 温度计测试，未成功.." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 温度计测试，未成功.." />
   </component>
 </project>
