@@ -25,13 +25,19 @@ typedef struct
 	lv_obj_t *screen_label_2;
 	lv_obj_t *screen_label_3;
 	lv_obj_t *screen_label_FAN_SPEED_VAL;
-	lv_obj_t *screen_label_TEMP_SET_VAL;
+	lv_obj_t *screen_label_TEMP_LOW_VAL;
 	lv_obj_t *screen_label_TEMP_VAL;
 	lv_obj_t *screen_label_7;
-	lv_obj_t *screen_btn_T_SET_sub;
-	lv_obj_t *screen_btn_T_SET_sub_label;
-	lv_obj_t *screen_btn_T_SET_add;
-	lv_obj_t *screen_btn_T_SET_add_label;
+	lv_obj_t *screen_btn_T_LOW_sub;
+	lv_obj_t *screen_btn_T_LOW_sub_label;
+	lv_obj_t *screen_btn_T_LOW_add;
+	lv_obj_t *screen_btn_T_LOW_add_label;
+	lv_obj_t *screen_label_8;
+	lv_obj_t *screen_label_TEMP_HIGH_VAL;
+	lv_obj_t *screen_btn_T_HIGH_add;
+	lv_obj_t *screen_btn_T_HIGH_add_label;
+	lv_obj_t *screen_btn_T_HIGH_sub;
+	lv_obj_t *screen_btn_T_HIGH_sub_label;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);

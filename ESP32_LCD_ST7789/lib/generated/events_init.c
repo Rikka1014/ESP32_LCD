@@ -10,7 +10,6 @@
 #include "events_init.h"
 #include <stdio.h>
 #include "lvgl.h"
-
 #include "temperature.h"
 
 #if LV_USE_GUIDER_SIMULATOR && LV_USE_FREEMASTER
@@ -35,25 +34,15 @@ static void screen_event_handler (lv_event_t *e)
     }
 }
 
-static void screen_btn_T_SET_sub_event_handler (lv_event_t *e)
+static void screen_btn_T_LOW_sub_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
     switch (code) {
-    case LV_EVENT_KEY:
-    {
-        break;
-    }
     case LV_EVENT_CLICKED:
-    {
-        set_temperature_set(get_temperature_set() - 1.0f);
-        // LV_LOG_WARN("%.1f", get_temperature_set());
-        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f°", get_temperature_set());
-        break;
-    }
     case LV_EVENT_LONG_PRESSED_REPEAT:
     {
-        set_temperature_set(get_temperature_set() - 1.0f);
-        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f°", get_temperature_set());
+        set_temperature_set_low(get_temperature_set_low() - 1.0f);
+        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_LOW_VAL, "%.1f°", get_temperature_set_low());
         break;
     }
     default:
@@ -61,24 +50,47 @@ static void screen_btn_T_SET_sub_event_handler (lv_event_t *e)
     }
 }
 
-static void screen_btn_T_SET_add_event_handler (lv_event_t *e)
+static void screen_btn_T_LOW_add_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
     switch (code) {
-    case LV_EVENT_KEY:
-    {
-        break;
-    }
     case LV_EVENT_CLICKED:
-    {
-        set_temperature_set(get_temperature_set() + 1.0f);
-        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f°", get_temperature_set());
-        break;
-    }
     case LV_EVENT_LONG_PRESSED_REPEAT:
     {
-        set_temperature_set(get_temperature_set() + 1.0f);
-        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_SET_VAL, "%.1f°", get_temperature_set());
+        set_temperature_set_low(get_temperature_set_low() + 1.0f);
+        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_LOW_VAL, "%.1f°", get_temperature_set_low());
+        break;
+    }
+    default:
+        break;
+    }
+}
+
+static void screen_btn_T_HIGH_sub_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_CLICKED:
+    case LV_EVENT_LONG_PRESSED_REPEAT:
+    {
+        set_temperature_set_high(get_temperature_set_high() - 1.0f);
+        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_HIGH_VAL, "%.1f°", get_temperature_set_high());
+        break;
+    }
+    default:
+        break;
+    }
+}
+
+static void screen_btn_T_HIGH_add_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_CLICKED:
+    case LV_EVENT_LONG_PRESSED_REPEAT:
+    {
+        set_temperature_set_high(get_temperature_set_high() + 1.0f);
+        lv_label_set_text_fmt(guider_ui.screen_label_TEMP_HIGH_VAL, "%.1f°", get_temperature_set_high());
         break;
     }
     default:
@@ -89,8 +101,10 @@ static void screen_btn_T_SET_add_event_handler (lv_event_t *e)
 void events_init_screen (lv_ui *ui)
 {
     lv_obj_add_event_cb(ui->screen, screen_event_handler, LV_EVENT_ALL, ui);
-    lv_obj_add_event_cb(ui->screen_btn_T_SET_sub, screen_btn_T_SET_sub_event_handler, LV_EVENT_ALL, ui);
-    lv_obj_add_event_cb(ui->screen_btn_T_SET_add, screen_btn_T_SET_add_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->screen_btn_T_LOW_sub, screen_btn_T_LOW_sub_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->screen_btn_T_LOW_add, screen_btn_T_LOW_add_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->screen_btn_T_HIGH_sub, screen_btn_T_HIGH_sub_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->screen_btn_T_HIGH_add, screen_btn_T_HIGH_add_event_handler, LV_EVENT_ALL, ui);
 }
 
 

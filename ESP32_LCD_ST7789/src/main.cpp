@@ -8,14 +8,14 @@
 #include "temperature_sensor.h"
 
 #define UI_TASK_STACK_SIZE 8192
-#define UI_TASK_PRIORITY   4
+#define UI_TASK_PRIORITY   5
 TaskHandle_t ui_task_handle = nullptr;
 void ui_task(void *pvParameters) {
     (void) pvParameters;
 
+    vTaskDelay(pdMS_TO_TICKS(100)); // 等待系统稳定
     // 初始化ui
     Serial.println("UI init start");
-    vTaskDelay(pdMS_TO_TICKS(100)); // 等待系统稳定
     my_ui_init();
     Serial.println("UI initialized");
 
@@ -27,24 +27,35 @@ void ui_task(void *pvParameters) {
 
 // 温度任务相关定义
 #define TEMPERATURE_STACK_SIZE      8192
-#define TEMPERATURE_TASK_PRIORITY   5
+#define TEMPERATURE_TASK_PRIORITY   3
 TaskHandle_t temperature_task_handle = nullptr;
 
 void temperature_task(void *pvParameters) {
     (void) pvParameters;
 
+    static float T_prev = 0.0f; // 上一次读取的温度值
+
+    vTaskDelay(pdMS_TO_TICKS(500)); // 等待UI初始化完成
     // 初始化温度传感器
     Serial.println("temperature initialized");
     temperature_sensor_init();
 
     while (true) {
-        float temperature;
-        bool ret = temperature_sensor_read_loop(&temperature);
+        float T_read;
+        bool ret = temperature_sensor_read_loop(&T_read);
         if (ret) {
-            set_temperature(temperature); // 设置当前温度
+            // 更新当前温度
+            set_temperature(T_read);
+            // 如果温度变化超过0.2度，则更新UI显示
+            if (abs(get_temperature() - T_prev) > 0.2f)
+            {
+                T_prev = get_temperature();
+                my_ui_update_temperature(get_temperature()); // 更新UI显示的温度
+            }
+
             Serial.printf("Current Temperature: %.2f°C\r\n", get_temperature());
         } else {
-            Serial.printf("Failed to read temperature, error val: %.2f°C\r\n", temperature);
+            Serial.printf("Failed to read temperature, error val: %.2f°C\r\n", T_read);
         }
         vTaskDelay(pdMS_TO_TICKS(1000));
     }

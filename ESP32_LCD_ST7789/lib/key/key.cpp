@@ -9,10 +9,41 @@
 void my_keypad_read(lv_indev_t * indev, lv_indev_data_t * data)
 {
 
-    if (analogRead(KEYPAD_PIN) < 2000)
+    int keypad_value = analogRead(KEYPAD_PIN);
+    if (keypad_value < 4000)
     {
-        data->state = LV_INDEV_STATE_PRESSED;
-        data->key = LV_KEY_NEXT; // 这里可以根据实际按键设置不同的 key
+        // Serial.print("keypad read");
+        // Serial.println(analogRead(KEYPAD_PIN));
+        if (keypad_value < 200)
+        {
+            data->state = LV_INDEV_STATE_PRESSED;
+            data->key = LV_KEY_DOWN;
+        }
+        else if (keypad_value < 1000)
+        {
+            data->state = LV_INDEV_STATE_PRESSED;
+            //data->key = LV_KEY_RIGHT;
+            data->key = LV_KEY_NEXT;
+        }
+        else if (keypad_value < 1500)   // 垂直按下
+        {
+            data->state = LV_INDEV_STATE_PRESSED;
+            data->key = LV_KEY_ENTER;
+        }
+        else if (keypad_value < 2000)
+        {
+            data->state = LV_INDEV_STATE_PRESSED;
+            //data->key = LV_KEY_LEFT;
+            data->key = LV_KEY_PREV;
+        }
+        else {
+            data->state = LV_INDEV_STATE_PRESSED;
+            data->key = LV_KEY_UP;
+        }
+
+
+        // data->state = LV_INDEV_STATE_PRESSED;
+        // data->key = LV_KEY_NEXT; // 这里可以根据实际按键设置不同的 key
     }
     else if (digitalRead(KEYPAD_PIN_2) == LOW)
     {

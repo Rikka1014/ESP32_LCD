@@ -22,10 +22,6 @@ bool temperature_sensor_read_loop(float *temperature) {
     if (*temperature != DEVICE_DISCONNECTED_C) {
         ret = true;
     }
-    // Serial.print("*temperature: ");
-    // Serial.print(*temperature);
-    // Serial.println(" C");
-    // delay(500);
 
     return ret;
 }

@@ -8,4 +8,6 @@
 void my_ui_init();
 void my_ui_update();
 
+void my_ui_update_temperature(float temperature);
+
 #endif //ESP32_LCD_ST7789_MY_UI_H
