@@ -47,7 +47,7 @@ void temperature_task(void *pvParameters) {
             // 更新当前温度
             set_temperature(T_read);
             // 如果温度变化超过0.2度，则更新UI显示
-            if (abs(get_temperature() - T_prev) > 0.2f)
+            if (abs(get_temperature() - T_prev) > 0.1f)
             {
                 T_prev = get_temperature();
                 my_ui_update_temperature(get_temperature()); // 更新UI显示的温度
