@@ -34,14 +34,17 @@ TaskHandle_t temperature_task_handle = nullptr;
 void temperature_task(void *pvParameters) {
     (void) pvParameters;
 
-    static float T_prev = 0.0f; // 上一次读取的温度值
 
-    vTaskDelay(pdMS_TO_TICKS(500)); // 等待UI初始化完成
+
+
+    vTaskDelay(pdMS_TO_TICKS(2000)); // 等待UI初始化完成
     // 初始化温度传感器
     Serial.println("temperature initialized");
     temperature_sensor_init();
 
     while (true) {
+        // 读取温度传感器数据
+        static float T_prev = 0.0f; // 上一次读取的温度值
         float T_read;
         bool ret = temperature_sensor_read_loop(&T_read);
         if (ret) {
@@ -58,6 +61,22 @@ void temperature_task(void *pvParameters) {
         } else {
             Serial.printf("Failed to read temperature, error val: %.2f°C\r\n", T_read);
         }
+
+        // 更新设备状态UI
+        static device_state_t state_prev = DEVICE_STATE_NULL;
+        device_state_t state_now = DEVICE_STATE_NORMAL;
+        if (get_temperature() < get_temperature_set_low()) {
+            state_now = DEVICE_STATE_COOL; // 低于设定低温，进入冷却状态
+        } else if (get_temperature() > get_temperature_set_high()) {
+            state_now = DEVICE_STATE_HEAT; // 高于设定高温，进入加热状态
+        } else {
+            state_now = DEVICE_STATE_NORMAL; // 在设定范围内，正常状态
+        }
+        if (state_now != state_prev) {
+            my_ui_update_devive_state(state_now); // 更新设备状态UI
+            state_prev = state_now; // 更新上一次状态
+        }
+
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }

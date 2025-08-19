@@ -398,6 +398,7 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_led_NORMAL = lv_led_create(ui->screen);
     lv_obj_set_pos(ui->screen_led_NORMAL, 195, 21);
     lv_obj_set_size(ui->screen_led_NORMAL, 9, 21);
+    lv_obj_add_flag(ui->screen_led_NORMAL, LV_OBJ_FLAG_HIDDEN);
     lv_led_set_brightness(ui->screen_led_NORMAL, 255);
     lv_led_set_color(ui->screen_led_NORMAL, lv_color_hex(0x00ff2b));
 
@@ -405,6 +406,7 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_led_HEAT = lv_led_create(ui->screen);
     lv_obj_set_pos(ui->screen_led_HEAT, 172, 21);
     lv_obj_set_size(ui->screen_led_HEAT, 9, 21);
+    lv_obj_add_flag(ui->screen_led_HEAT, LV_OBJ_FLAG_HIDDEN);
     lv_led_set_brightness(ui->screen_led_HEAT, 255);
     lv_led_set_color(ui->screen_led_HEAT, lv_color_hex(0xff0027));
 
@@ -412,8 +414,10 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_led_COOL = lv_led_create(ui->screen);
     lv_obj_set_pos(ui->screen_led_COOL, 218, 21);
     lv_obj_set_size(ui->screen_led_COOL, 9, 21);
+    lv_obj_add_flag(ui->screen_led_COOL, LV_OBJ_FLAG_HIDDEN);
     lv_led_set_brightness(ui->screen_led_COOL, 255);
     lv_led_set_color(ui->screen_led_COOL, lv_color_hex(0x00d2ff));
+
 
     //The custom code of screen.
     lv_group_add_obj(group0, ui->screen_btn_T_LOW_sub);

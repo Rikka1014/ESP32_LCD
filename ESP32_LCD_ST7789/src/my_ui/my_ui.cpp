@@ -103,3 +103,25 @@ void my_ui_update_temperature(float temperature) {
     lv_label_set_text_fmt(guider_ui.screen_label_TEMP_VAL, "%.1f°", temperature);
 }
 
+void my_ui_update_devive_state(device_state_t state) {
+    switch (state) {
+        case DEVICE_STATE_NORMAL:
+            lv_obj_clear_flag(guider_ui.screen_led_NORMAL, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_add_flag(guider_ui.screen_led_HEAT, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_add_flag(guider_ui.screen_led_COOL, LV_OBJ_FLAG_HIDDEN);
+            break;
+        case DEVICE_STATE_HEAT:
+            lv_obj_add_flag(guider_ui.screen_led_NORMAL, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_clear_flag(guider_ui.screen_led_HEAT, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_add_flag(guider_ui.screen_led_COOL, LV_OBJ_FLAG_HIDDEN);
+            break;
+        case DEVICE_STATE_COOL:
+            lv_obj_add_flag(guider_ui.screen_led_NORMAL, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_add_flag(guider_ui.screen_led_HEAT, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_clear_flag(guider_ui.screen_led_COOL, LV_OBJ_FLAG_HIDDEN);
+            break;
+        default:
+            break;
+    }
+}
+

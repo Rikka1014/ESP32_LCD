@@ -22,13 +22,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 电源控制api">
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 总电源UI开关完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/events_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/events_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/gui_guider.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/gui_guider.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/setup_scr_screen.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/key/key.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/key/key.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui/my_ui.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui/my_ui.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -885,7 +884,7 @@
       <workItem from="1755578925530" duration="6965000" />
       <workItem from="1755587559791" duration="2777000" />
       <workItem from="1755620129811" duration="3645000" />
-      <workItem from="1755624459113" duration="1288000" />
+      <workItem from="1755624459113" duration="3566000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -1127,7 +1126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755589609359</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix: 总电源UI开关完成">
+      <option name="closed" value="true" />
+      <created>1755625870356</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1755625870356</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1157,7 +1164,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="creat: LVGL+SquareLine显示成功" />
     <MESSAGE value="creat: LVGL+SquareLine图表显示成功" />
     <MESSAGE value="creat: LVGL+GUIGuider移植，暂未测试" />
     <MESSAGE value="creat: LVGL+GUIGuider移植，跑通" />
@@ -1182,6 +1188,7 @@
     <MESSAGE value="fix: 高低温界面设定OK" />
     <MESSAGE value="fix: SHT40读取温度正常" />
     <MESSAGE value="fix: 电源控制api" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 电源控制api" />
+    <MESSAGE value="fix: 总电源UI开关完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 总电源UI开关完成" />
   </component>
 </project>
