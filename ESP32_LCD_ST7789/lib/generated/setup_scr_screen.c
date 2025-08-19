@@ -162,7 +162,7 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_TEMP_VAL = lv_label_create(ui->screen);
     lv_obj_set_pos(ui->screen_label_TEMP_VAL, 88, 13);
     lv_obj_set_size(ui->screen_label_TEMP_VAL, 70, 31);
-    lv_label_set_text(ui->screen_label_TEMP_VAL, "50.5°");
+    lv_label_set_text(ui->screen_label_TEMP_VAL, "30.5°");
     lv_label_set_long_mode(ui->screen_label_TEMP_VAL, LV_LABEL_LONG_WRAP);
 
     //Write style for screen_label_TEMP_VAL, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -313,7 +313,7 @@ void setup_scr_screen(lv_ui *ui)
 
     //Write codes screen_btn_T_HIGH_add
     ui->screen_btn_T_HIGH_add = lv_button_create(ui->screen);
-    lv_obj_set_pos(ui->screen_btn_T_HIGH_add, 204, 104);
+    lv_obj_set_pos(ui->screen_btn_T_HIGH_add, 204, 101);
     lv_obj_set_size(ui->screen_btn_T_HIGH_add, 30, 30);
     ui->screen_btn_T_HIGH_add_label = lv_label_create(ui->screen_btn_T_HIGH_add);
     lv_label_set_text(ui->screen_btn_T_HIGH_add_label, "+");
@@ -367,11 +367,61 @@ void setup_scr_screen(lv_ui *ui)
     lv_obj_set_style_text_opa(ui->screen_btn_T_HIGH_sub, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->screen_btn_T_HIGH_sub, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+    //Write codes screen_sw_MASTER_POWER
+    ui->screen_sw_MASTER_POWER = lv_switch_create(ui->screen);
+    lv_obj_set_pos(ui->screen_sw_MASTER_POWER, 16, 198);
+    lv_obj_set_size(ui->screen_sw_MASTER_POWER, 40, 20);
+    lv_obj_add_flag(ui->screen_sw_MASTER_POWER, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+
+    //Write style for screen_sw_MASTER_POWER, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->screen_sw_MASTER_POWER, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->screen_sw_MASTER_POWER, lv_color_hex(0xe6e2e6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->screen_sw_MASTER_POWER, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->screen_sw_MASTER_POWER, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->screen_sw_MASTER_POWER, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->screen_sw_MASTER_POWER, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for screen_sw_MASTER_POWER, Part: LV_PART_INDICATOR, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->screen_sw_MASTER_POWER, 255, LV_PART_INDICATOR|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->screen_sw_MASTER_POWER, lv_color_hex(0x2195f6), LV_PART_INDICATOR|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->screen_sw_MASTER_POWER, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->screen_sw_MASTER_POWER, 0, LV_PART_INDICATOR|LV_STATE_CHECKED);
+
+    //Write style for screen_sw_MASTER_POWER, Part: LV_PART_KNOB, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->screen_sw_MASTER_POWER, 255, LV_PART_KNOB|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->screen_sw_MASTER_POWER, lv_color_hex(0xffffff), LV_PART_KNOB|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->screen_sw_MASTER_POWER, LV_GRAD_DIR_NONE, LV_PART_KNOB|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->screen_sw_MASTER_POWER, 0, LV_PART_KNOB|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->screen_sw_MASTER_POWER, 10, LV_PART_KNOB|LV_STATE_DEFAULT);
+
+    //Write codes screen_led_NORMAL
+    ui->screen_led_NORMAL = lv_led_create(ui->screen);
+    lv_obj_set_pos(ui->screen_led_NORMAL, 195, 21);
+    lv_obj_set_size(ui->screen_led_NORMAL, 9, 21);
+    lv_led_set_brightness(ui->screen_led_NORMAL, 255);
+    lv_led_set_color(ui->screen_led_NORMAL, lv_color_hex(0x00ff2b));
+
+    //Write codes screen_led_HEAT
+    ui->screen_led_HEAT = lv_led_create(ui->screen);
+    lv_obj_set_pos(ui->screen_led_HEAT, 172, 21);
+    lv_obj_set_size(ui->screen_led_HEAT, 9, 21);
+    lv_led_set_brightness(ui->screen_led_HEAT, 255);
+    lv_led_set_color(ui->screen_led_HEAT, lv_color_hex(0xff0027));
+
+    //Write codes screen_led_COOL
+    ui->screen_led_COOL = lv_led_create(ui->screen);
+    lv_obj_set_pos(ui->screen_led_COOL, 218, 21);
+    lv_obj_set_size(ui->screen_led_COOL, 9, 21);
+    lv_led_set_brightness(ui->screen_led_COOL, 255);
+    lv_led_set_color(ui->screen_led_COOL, lv_color_hex(0x00d2ff));
+
     //The custom code of screen.
     lv_group_add_obj(group0, ui->screen_btn_T_LOW_sub);
     lv_group_add_obj(group0, ui->screen_btn_T_LOW_add);
     lv_group_add_obj(group0, ui->screen_btn_T_HIGH_sub);
     lv_group_add_obj(group0, ui->screen_btn_T_HIGH_add);
+    lv_group_add_obj(group0, ui->screen_sw_MASTER_POWER);
+    lv_obj_add_state(ui->screen_sw_MASTER_POWER, LV_STATE_CHECKED);
 
     //Update current screen layout.
     lv_obj_update_layout(ui->screen);

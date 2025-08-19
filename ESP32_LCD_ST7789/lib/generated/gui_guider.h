@@ -38,6 +38,10 @@ typedef struct
 	lv_obj_t *screen_btn_T_HIGH_add_label;
 	lv_obj_t *screen_btn_T_HIGH_sub;
 	lv_obj_t *screen_btn_T_HIGH_sub_label;
+	lv_obj_t *screen_sw_MASTER_POWER;
+	lv_obj_t *screen_led_NORMAL;
+	lv_obj_t *screen_led_HEAT;
+	lv_obj_t *screen_led_COOL;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);

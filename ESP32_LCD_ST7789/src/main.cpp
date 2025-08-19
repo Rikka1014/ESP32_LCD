@@ -68,10 +68,8 @@ void setup() {
 
     power_switch_init();
     power_switch_set_master(true); // 打开主电源开关
-    delay(1000);
-    power_switch_set_master(false);
-    delay(1000);
-    power_switch_set_master(true); // 再次打开主电源开关
+    delay(500);
+
     // 创建UI任务
     xTaskCreate(
             ui_task,                // 任务函数

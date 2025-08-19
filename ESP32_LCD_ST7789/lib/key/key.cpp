@@ -17,7 +17,8 @@ void my_keypad_read(lv_indev_t * indev, lv_indev_data_t * data)
         if (keypad_value < 200)
         {
             data->state = LV_INDEV_STATE_PRESSED;
-            data->key = LV_KEY_DOWN;
+            // data->key = LV_KEY_DOWN;
+            data->key = LV_KEY_NEXT;
         }
         else if (keypad_value < 1000)
         {
@@ -38,7 +39,8 @@ void my_keypad_read(lv_indev_t * indev, lv_indev_data_t * data)
         }
         else {
             data->state = LV_INDEV_STATE_PRESSED;
-            data->key = LV_KEY_UP;
+            // data->key = LV_KEY_UP;
+            data->key = LV_KEY_PREV;
         }
 
 
