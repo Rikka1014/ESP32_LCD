@@ -6,6 +6,7 @@
 #include "key.h"
 #include "temperature.h"
 #include "temperature_sensor.h"
+#include "power_switch.h"
 
 #define UI_TASK_STACK_SIZE 8192
 #define UI_TASK_PRIORITY   5
@@ -65,6 +66,12 @@ void setup() {
     Serial.begin(115200);
     // while (!Serial) {}; // 等待串口准备好
 
+    power_switch_init();
+    power_switch_set_master(true); // 打开主电源开关
+    delay(1000);
+    power_switch_set_master(false);
+    delay(1000);
+    power_switch_set_master(true); // 再次打开主电源开关
     // 创建UI任务
     xTaskCreate(
             ui_task,                // 任务函数

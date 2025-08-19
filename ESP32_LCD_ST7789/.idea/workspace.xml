@@ -22,9 +22,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 高低温界面设定OK">
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: SHT40读取温度正常">
+      <change afterPath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformio.ini" beforeDir="false" afterPath="$PROJECT_DIR$/platformio.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
@@ -77,6 +78,7 @@
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/Adafruit BusIO/Adafruit_I2CDevice.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/Adafruit GFX Library/Adafruit_GFX.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/Adafruit GFX Library/Adafruit_GFX.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/Adafruit SHT4x Library/Adafruit_SHT4x.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/Adafruit SHT4x Library/Adafruit_SHT4x.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/Adafruit ST7735 and ST7789 Library/Adafruit_ST7735.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/Adafruit ST7735 and ST7789 Library/examples/rotationtest/rotationtest.ino" root0="FORCE_HIGHLIGHTING" />
@@ -85,6 +87,8 @@
     <setting file="file://$PROJECT_DIR$/.pio/libdeps/esp32s3usbotg/ArduinoJson/src/ArduinoJson/compatibility.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/DallasTemperature/DallasTemperature.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/OneWire/OneWire.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/PowerSwitch/power_switch.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/PowerSwitch/power_switch.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/Temperature/temperature.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/Temperature/temperature.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -200,9 +204,9 @@
     </option>
   </component>
   <component name="RunManager" selected="PlatformIO.PlatformIO">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="PC_keboard (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -293,7 +297,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="PC_keboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="PC_keboard (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ESP32_LCD_ST7789" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -302,11 +306,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/my_ui" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\PC_keboard.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/PC_keboard.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -439,6 +443,72 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\PC_keboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PC_keboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ESP32_LCD_ST7789" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/my_ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\PC_keboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PC_keboard" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ESP32_LCD_ST7789" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/my_ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\PC_keboard.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ESP32_LCD_ST7789" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/my_ui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="N:\StudyAndProgress\ESP32_LCD\ESP32_LCD_ST7789\src\pc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -643,6 +713,9 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ESP32_LCD_ST7789" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
       <method v="2" />
     </configuration>
     <configuration name="PlatformIO" type="platformio" factoryName="PlatformIO Debug" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ESP32_LCD_ST7789" TARGET_NAME="PlatformIO" CONFIG_NAME="PlatformIO">
@@ -739,7 +812,8 @@
       <workItem from="1755400386859" duration="2002000" />
       <workItem from="1755403146526" duration="10978000" />
       <workItem from="1755523302935" duration="8568000" />
-      <workItem from="1755578925530" duration="5754000" />
+      <workItem from="1755578925530" duration="6965000" />
+      <workItem from="1755587559791" duration="1705000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -965,7 +1039,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755530834093</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix: SHT40读取温度正常">
+      <option name="closed" value="true" />
+      <created>1755585128297</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1755585128297</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -995,7 +1077,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="creat: Adafruit_ST7789显示demo,正常" />
     <MESSAGE value="creat: LVGL移植完成，测试正常" />
     <MESSAGE value="creat: LVGL+SquareLine显示成功" />
     <MESSAGE value="creat: LVGL+SquareLine图表显示成功" />
@@ -1020,6 +1101,7 @@
     <MESSAGE value="fix: 温度计测试，未成功.." />
     <MESSAGE value="fix: 温度计测试，显示成功" />
     <MESSAGE value="fix: 高低温界面设定OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 高低温界面设定OK" />
+    <MESSAGE value="fix: SHT40读取温度正常" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: SHT40读取温度正常" />
   </component>
 </project>
