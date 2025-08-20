@@ -74,9 +74,9 @@ void temperature_task(void *pvParameters) {
         static device_state_t state_prev = DEVICE_STATE_NULL;
         device_state_t state_now = DEVICE_STATE_NORMAL;
         if (get_temperature() < get_temperature_set_low()) {
-            state_now = DEVICE_STATE_COOL; // 低于设定低温，进入冷却状态
+            state_now = DEVICE_STATE_HEAT; // 低于设定低温，进入加热状态
         } else if (get_temperature() > get_temperature_set_high()) {
-            state_now = DEVICE_STATE_HEAT; // 高于设定高温，进入加热状态
+            state_now = DEVICE_STATE_COOL; // 高于设定高温，进入冷却状态
         } else {
             state_now = DEVICE_STATE_NORMAL; // 在设定范围内，正常状态
         }
