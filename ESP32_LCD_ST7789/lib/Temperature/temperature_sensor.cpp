@@ -34,13 +34,13 @@ void temperature_sensor_init(void) {
     }
 }
 
-bool temperature_sensor_read_loop(float *temperature) {
+bool temperature_sensor_read_loop(float *t, float *h) {
     bool ret = false;
 
     if (USE_SENSOR_DS18B20) {
         DS18B20.requestTemperatures();  // 发起新的温度转换
-        *temperature = DS18B20.getTempCByIndex(0);  // 读取前一次的温度
-        if (*temperature != DEVICE_DISCONNECTED_C) {
+        *t = DS18B20.getTempCByIndex(0);  // 读取前一次的温度
+        if (*t != DEVICE_DISCONNECTED_C) {
             ret = true;
         }
     }
@@ -58,7 +58,8 @@ bool temperature_sensor_read_loop(float *temperature) {
         Serial.print(humidity.relative_humidity);
         Serial.println("%");
 
-        *temperature = temp.temperature; // 获取温度值
+        *t = temp.temperature; // 获取温度值
+        *h = humidity.relative_humidity; // 获取湿度值
 
         ret = true;
     }

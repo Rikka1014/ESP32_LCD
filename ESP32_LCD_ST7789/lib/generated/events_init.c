@@ -8,6 +8,8 @@
 */
 
 #include "events_init.h"
+
+#include <Arduino.h>
 #include <stdio.h>
 #include "lvgl.h"
 #include "temperature.h"
@@ -42,7 +44,7 @@ static void screen_btn_T_LOW_sub_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     case LV_EVENT_LONG_PRESSED_REPEAT:
     {
-        set_temperature_set_low(get_temperature_set_low() - 1.0f);
+        set_temperature_set_low(get_temperature_set_low() - 0.5f);
         lv_label_set_text_fmt(guider_ui.screen_label_TEMP_LOW_VAL, "%.1f°", get_temperature_set_low());
         break;
     }
@@ -58,7 +60,7 @@ static void screen_btn_T_LOW_add_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     case LV_EVENT_LONG_PRESSED_REPEAT:
     {
-        set_temperature_set_low(get_temperature_set_low() + 1.0f);
+        set_temperature_set_low(get_temperature_set_low() + 0.5f);
         lv_label_set_text_fmt(guider_ui.screen_label_TEMP_LOW_VAL, "%.1f°", get_temperature_set_low());
         break;
     }
@@ -74,7 +76,7 @@ static void screen_btn_T_HIGH_sub_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     case LV_EVENT_LONG_PRESSED_REPEAT:
     {
-        set_temperature_set_high(get_temperature_set_high() - 1.0f);
+        set_temperature_set_high(get_temperature_set_high() - 0.5f);
         lv_label_set_text_fmt(guider_ui.screen_label_TEMP_HIGH_VAL, "%.1f°", get_temperature_set_high());
         break;
     }
@@ -90,7 +92,7 @@ static void screen_btn_T_HIGH_add_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     case LV_EVENT_LONG_PRESSED_REPEAT:
     {
-        set_temperature_set_high(get_temperature_set_high() + 1.0f);
+        set_temperature_set_high(get_temperature_set_high() + 0.5f);
         lv_label_set_text_fmt(guider_ui.screen_label_TEMP_HIGH_VAL, "%.1f°", get_temperature_set_high());
         break;
     }

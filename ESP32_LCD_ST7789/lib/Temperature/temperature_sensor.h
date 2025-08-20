@@ -18,7 +18,7 @@ extern "C" {
 #define USE_SENSOR_SHT40    1   // 使用SHT40传感器
 
 void temperature_sensor_init(void);
-bool temperature_sensor_read_loop(float *temperature);
+bool temperature_sensor_read_loop(float *t, float *h);
 
 #ifdef __cplusplus
 }

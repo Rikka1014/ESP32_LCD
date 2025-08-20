@@ -44,17 +44,25 @@ void temperature_task(void *pvParameters) {
 
     while (true) {
         // 读取温度传感器数据
-        static float T_prev = 0.0f; // 上一次读取的温度值
-        float T_read;
-        bool ret = temperature_sensor_read_loop(&T_read);
+        static float T_prev = 0.0f;     // 上一次读取的温度值
+        static float hum_prev = 0.0f;   // 上一次读取的湿度值
+        float T_read, hum_read;
+        bool ret = temperature_sensor_read_loop(&T_read, &hum_read);
         if (ret) {
-            // 更新当前温度
+            // 设置当前温度和湿度
             set_temperature(T_read);
+            set_humidity(hum_read);
             // 如果温度变化超过0.2度，则更新UI显示
             if (abs(get_temperature() - T_prev) > 0.1f)
             {
                 T_prev = get_temperature();
                 my_ui_update_temperature(get_temperature()); // 更新UI显示的温度
+            }
+
+            if (abs(get_humidity() - hum_prev) > 0.1f)
+            {
+                hum_prev = hum_read;
+                my_ui_update_humidity(get_humidity()); // 更新UI显示的湿度
             }
 
             Serial.printf("Current Temperature: %.2f°C\r\n", get_temperature());

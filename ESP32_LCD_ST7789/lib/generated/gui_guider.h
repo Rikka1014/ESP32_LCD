@@ -24,10 +24,9 @@ typedef struct
 	lv_obj_t *screen_label_1;
 	lv_obj_t *screen_label_2;
 	lv_obj_t *screen_label_3;
-	lv_obj_t *screen_label_FAN_SPEED_VAL;
+	lv_obj_t *screen_label_HUMI;
 	lv_obj_t *screen_label_TEMP_LOW_VAL;
 	lv_obj_t *screen_label_TEMP_VAL;
-	lv_obj_t *screen_label_7;
 	lv_obj_t *screen_btn_T_LOW_sub;
 	lv_obj_t *screen_btn_T_LOW_sub_label;
 	lv_obj_t *screen_btn_T_LOW_add;
@@ -74,7 +73,6 @@ void setup_scr_screen(lv_ui *ui);
 LV_FONT_DECLARE(lv_font_Antonio_Regular_25)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_Antonio_Regular_28)
-LV_FONT_DECLARE(lv_font_Antonio_Regular_12)
 LV_FONT_DECLARE(lv_font_Adventpro_regular_35)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)
 

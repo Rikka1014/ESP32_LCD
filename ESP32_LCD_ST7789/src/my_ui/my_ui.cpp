@@ -103,6 +103,10 @@ void my_ui_update_temperature(float temperature) {
     lv_label_set_text_fmt(guider_ui.screen_label_TEMP_VAL, "%.1f°", temperature);
 }
 
+void my_ui_update_humidity(float humidity) {
+    lv_label_set_text_fmt(guider_ui.screen_label_HUMI, "%.1f%%", humidity);
+}
+
 void my_ui_update_devive_state(device_state_t state) {
     switch (state) {
         case DEVICE_STATE_NORMAL:
