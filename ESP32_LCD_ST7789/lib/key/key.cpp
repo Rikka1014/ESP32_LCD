@@ -2,6 +2,7 @@
 #include <lvgl.h>
 #include "key.h"
 #include "custom.h"
+#include "Buzzer.h"
 
 #define KEYPAD_PIN 15 // 模拟按键输入引脚
 #define KEYPAD_PIN_2 7 // 模拟按键输入引脚
@@ -58,6 +59,21 @@ void my_keypad_read(lv_indev_t * indev, lv_indev_data_t * data)
     }
 }
 
+// static void custom_key_event_handler(lv_event_t *e)
+// {
+//     lv_event_code_t code = lv_event_get_code(e);
+//     switch (code) {
+//         case LV_EVENT_KEY:
+//         {
+//             Buzzer_Tone(1000, 20);
+//             break;
+//         }
+//         default:
+//             break;
+//     }
+// }
+
+
 static volatile uint32_t g_last_key = 0;
 static volatile bool g_key_pressed = false;
 void my_uart_keypad_read(lv_indev_t * indev, lv_indev_data_t * data)
@@ -80,7 +96,8 @@ void keypad_init(void)
     static lv_indev_t * indev;
     indev = lv_indev_create(); // 创建一个输入设备
     lv_indev_set_type(indev, LV_INDEV_TYPE_KEYPAD); // 设置为键盘类型
-    lv_indev_set_read_cb(indev, my_keypad_read);    // 设置读取回调函数
+    lv_indev_set_read_cb(indev, my_keypad_read);    //
+    // lv_indev_add_event_cb(indev, custom_key_event_handler, LV_EVENT_ALL, NULL);
 
     // 将KEYPAD与其要控制的组件添加到同一个组
     lv_indev_set_group(indev, group0);

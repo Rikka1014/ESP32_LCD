@@ -14,6 +14,7 @@
 #include "lvgl.h"
 #include "temperature.h"
 #include "power_switch.h"
+#include "Buzzer.h"
 
 #if LV_USE_GUIDER_SIMULATOR && LV_USE_FREEMASTER
 #include "freemaster_client.h"
@@ -28,8 +29,24 @@ static void screen_event_handler (lv_event_t *e)
     {
         break;
     }
-    case LV_EVENT_CLICKED:
+    // case LV_EVENT_CLICKED:
+    // {
+    //     Buzzer_Tone(2000, 20);
+    //     break;
+    // }
+    case LV_EVENT_PRESSED:
     {
+        Buzzer_Tone(2500, 20);
+        break;
+    }
+    // case LV_EVENT_RELEASED:
+    // {
+    //     Buzzer_Tone(2000, 20);
+    //     break;
+    // }
+    case LV_EVENT_FOCUSED:
+    {
+        Buzzer_Tone(2000, 20);
         break;
     }
     default:
@@ -41,6 +58,10 @@ static void screen_btn_T_LOW_sub_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
     switch (code) {
+    case LV_EVENT_PRESSED:
+    {
+        break;
+    }
     case LV_EVENT_CLICKED:
     case LV_EVENT_LONG_PRESSED_REPEAT:
     {

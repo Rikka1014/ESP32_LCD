@@ -7,6 +7,7 @@
 #include "temperature.h"
 #include "temperature_sensor.h"
 #include "power_switch.h"
+#include "Buzzer.h"
 
 #define UI_TASK_STACK_SIZE 8192
 #define UI_TASK_PRIORITY   5
@@ -14,7 +15,6 @@ TaskHandle_t ui_task_handle = nullptr;
 void ui_task(void *pvParameters) {
     (void) pvParameters;
 
-    vTaskDelay(pdMS_TO_TICKS(100)); // 等待系统稳定
     // 初始化ui
     Serial.println("UI init start");
     my_ui_init();
@@ -34,10 +34,6 @@ TaskHandle_t temperature_task_handle = nullptr;
 void temperature_task(void *pvParameters) {
     (void) pvParameters;
 
-
-
-
-    vTaskDelay(pdMS_TO_TICKS(2000)); // 等待UI初始化完成
     // 初始化温度传感器
     Serial.println("temperature initialized");
     temperature_sensor_init();
@@ -89,13 +85,15 @@ void temperature_task(void *pvParameters) {
     }
 }
 
+
 void setup() {
     Serial.begin(115200);
     // while (!Serial) {}; // 等待串口准备好
 
     power_switch_init();
     power_switch_set_master(true); // 打开主电源开关
-    delay(500);
+
+    delay(500); // 等待系统稳定
 
     // 创建UI任务
     xTaskCreate(
@@ -106,6 +104,9 @@ void setup() {
             UI_TASK_PRIORITY,       // 任务优先级
             &ui_task_handle         // 任务句柄
     );
+
+    delay(2000); // 等待UI初始化完成
+
     // 创建温度任务
     xTaskCreate(
             temperature_task,           // 任务函数
@@ -116,6 +117,8 @@ void setup() {
             &temperature_task_handle    // 任务句柄
     );
 
+    // 初始化蜂鸣器
+    Buzzer_Init();
 }
 
 void loop() {

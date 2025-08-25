@@ -406,11 +406,18 @@ void setup_scr_screen(lv_ui *ui)
     lv_led_set_color(ui->screen_led_COOL, lv_color_hex(0x00d2ff));
 
     //The custom code of screen.
+    lv_group_add_obj(group0, ui->screen);
     lv_group_add_obj(group0, ui->screen_btn_T_LOW_sub);
     lv_group_add_obj(group0, ui->screen_btn_T_LOW_add);
     lv_group_add_obj(group0, ui->screen_btn_T_HIGH_sub);
     lv_group_add_obj(group0, ui->screen_btn_T_HIGH_add);
     lv_group_add_obj(group0, ui->screen_sw_MASTER_POWER);
+    lv_obj_add_flag(ui->screen_btn_T_LOW_sub, LV_OBJ_FLAG_EVENT_BUBBLE);
+    lv_obj_add_flag(ui->screen_btn_T_LOW_add, LV_OBJ_FLAG_EVENT_BUBBLE);
+    lv_obj_add_flag(ui->screen_btn_T_HIGH_sub, LV_OBJ_FLAG_EVENT_BUBBLE);
+    lv_obj_add_flag(ui->screen_btn_T_HIGH_add, LV_OBJ_FLAG_EVENT_BUBBLE);
+    lv_obj_add_flag(ui->screen_sw_MASTER_POWER, LV_OBJ_FLAG_EVENT_BUBBLE);
+
     lv_obj_add_state(ui->screen_sw_MASTER_POWER, LV_STATE_CHECKED);
 
     //Update current screen layout.
