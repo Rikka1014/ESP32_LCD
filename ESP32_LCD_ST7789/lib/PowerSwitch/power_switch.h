@@ -10,8 +10,8 @@ extern "C" {
 #endif
 
 #define MASTER_SWITCH_PIN    16 // 电源开关引脚
-#define OUT0_12V_SWITCH_PIN 17 // 12V输出开关引脚
-#define OUT1_12V_SWITCH_PIN 18 // 12V输出开关引脚
+#define OUT0_12V_SWITCH_PIN 18 // 12V输出开关引脚
+#define OUT1_12V_SWITCH_PIN 17 // 12V输出开关引脚
 
 void power_switch_init(void);
 void power_switch_set_master(bool on);

@@ -77,7 +77,23 @@ void temperature_task(void *pvParameters) {
             state_now = DEVICE_STATE_NORMAL; // 在设定范围内，正常状态
         }
         if (state_now != state_prev) {
-            my_ui_update_devive_state(state_now); // 更新设备状态UI
+            // 更新设备状态UI
+            my_ui_update_devive_state(state_now);
+            // 根据状态控制12V输出和蜂鸣器
+            if (state_now == DEVICE_STATE_HEAT) {
+                Buzzer_Tone(1800, 100);   // 加热状态，蜂鸣器响100ms
+                power_switch_set_out0_12v(true);    // 打开12V输出开关0（加热）
+                power_switch_set_out1_12v(false);   // 关闭12V输出开关1（冷却）
+            } else if (state_now == DEVICE_STATE_COOL) {
+                Buzzer_Tone(1800, 100);
+                power_switch_set_out0_12v(false);   // 关闭12V输出开关0（加热）
+                power_switch_set_out1_12v(true);    // 打开12V输出开关1（冷却）
+            } else {
+                Buzzer_Tone(1800, 100);
+                power_switch_set_out0_12v(false);   // 关闭12V输出开关0（加热）
+                power_switch_set_out1_12v(false);   // 关闭12V输出开关1（冷却）
+            }
+
             state_prev = state_now; // 更新上一次状态
         }
 
@@ -92,6 +108,8 @@ void setup() {
 
     power_switch_init();
     power_switch_set_master(true); // 打开主电源开关
+    // power_switch_set_out0_12v(true); // 打开12V输出开关0
+    // power_switch_set_out1_12v(false); // 打开12V输出开关
 
     delay(500); // 等待系统稳定
 

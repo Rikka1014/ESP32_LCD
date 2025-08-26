@@ -9,9 +9,9 @@ void power_switch_init(void) {
     pinMode(OUT0_12V_SWITCH_PIN, OUTPUT);
     pinMode(OUT1_12V_SWITCH_PIN, OUTPUT);
 
-    digitalWrite(MASTER_SWITCH_PIN, LOW);
-    digitalWrite(OUT0_12V_SWITCH_PIN, LOW);
-    digitalWrite(OUT1_12V_SWITCH_PIN, LOW);
+    digitalWrite(MASTER_SWITCH_PIN, LOW);   // 关闭主电源开关
+    digitalWrite(OUT0_12V_SWITCH_PIN, LOW); // 关闭OUT0 12V输出
+    digitalWrite(OUT1_12V_SWITCH_PIN, LOW); // 关闭OUT1 12V输出
 }
 
 void power_switch_set_master(bool on) {
