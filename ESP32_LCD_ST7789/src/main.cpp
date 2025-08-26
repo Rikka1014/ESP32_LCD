@@ -81,17 +81,14 @@ void temperature_task(void *pvParameters) {
             my_ui_update_devive_state(state_now);
             // 根据状态控制12V输出和蜂鸣器
             if (state_now == DEVICE_STATE_HEAT) {
-                Buzzer_Tone(1800, 100);   // 加热状态，蜂鸣器响100ms
-                power_switch_set_out0_12v(true);    // 打开12V输出开关0（加热）
-                power_switch_set_out1_12v(false);   // 关闭12V输出开关1（冷却）
+                Buzzer_Tone(1800, 100);
+                power_switch_set_out1_pwm(50); // 打开12V输出1，80%功率
             } else if (state_now == DEVICE_STATE_COOL) {
                 Buzzer_Tone(1800, 100);
-                power_switch_set_out0_12v(false);   // 关闭12V输出开关0（加热）
-                power_switch_set_out1_12v(true);    // 打开12V输出开关1（冷却）
+                power_switch_set_out1_pwm(10); // 打开12V输出1，100%功率
             } else {
                 Buzzer_Tone(1800, 100);
-                power_switch_set_out0_12v(false);   // 关闭12V输出开关0（加热）
-                power_switch_set_out1_12v(false);   // 关闭12V输出开关1（冷却）
+                power_switch_set_out1_pwm(0);   // 关闭12V输出1
             }
 
             state_prev = state_now; // 更新上一次状态

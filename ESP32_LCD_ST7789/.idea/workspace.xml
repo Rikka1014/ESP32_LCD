@@ -22,7 +22,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 增加了按键声音">
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 温控输出口测试正常（继电器式）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.h" afterDir="false" />
@@ -53,7 +53,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="Tang_128x128_ST7735" />
+        <entry key="$PROJECT_DIR$/.." value="Tang_240x240_ST7789" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -110,6 +110,7 @@
     <setting file="file://$PROJECT_DIR$/lib/lvgl/src/widgets/label/lv_label.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/events_init，" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Code/LabHub/ESP32_LCD/ESP32_LCD_ST7789/src/main.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/my_ui/my_ui.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/my_ui/my_ui.h" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -155,35 +156,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;PlatformIO.PlatformIO.executor&quot;: &quot;Run&quot;,
-    &quot;Python.PC_keboard (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.PC_keboard.executor&quot;: &quot;Run&quot;,
-    &quot;Python.pc.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Tang__240x240__ST7789&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Code/LabHub/ESP32_LCD/ESP32_LCD_ST7789/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "PlatformIO.PlatformIO.executor": "Run",
+    "Python.PC_keboard (1).executor": "Run",
+    "Python.PC_keboard.executor": "Run",
+    "Python.pc.executor": "Run",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "Tang__pid",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Code/LabHub/ESP32_LCD/ESP32_LCD_ST7789/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code\LabHub\ESP32_LCD\ESP32_LCD_ST7789\src" />
@@ -890,7 +891,7 @@
       <workItem from="1755661094527" duration="7441000" />
       <workItem from="1755688426774" duration="1767000" />
       <workItem from="1756089647248" duration="11906000" />
-      <workItem from="1756178665530" duration="4693000" />
+      <workItem from="1756178665530" duration="8896000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -1172,7 +1173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756102788071</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fix: 温控输出口测试正常（继电器式）">
+      <option name="closed" value="true" />
+      <created>1756190380184</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1756190380184</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1202,7 +1211,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add: PC键盘监听+串口发送键值 py脚本" />
     <MESSAGE value="bug: 无法通过键盘切换页面" />
     <MESSAGE value="bug: 实体按键绑定屏幕按钮实现页面切换" />
     <MESSAGE value="fix: 按键可以正常触发事件。Group需要在任何实体输入设备/屏幕组件加入它之前就初始化创建好☆" />
@@ -1227,6 +1235,7 @@
     <MESSAGE value="fix: 湿度显示" />
     <MESSAGE value="fix: 更正加热和冷却UI显示逻辑" />
     <MESSAGE value="fix: 增加了按键声音" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 增加了按键声音" />
+    <MESSAGE value="fix: 温控输出口测试正常（继电器式）" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 温控输出口测试正常（继电器式）" />
   </component>
 </project>
