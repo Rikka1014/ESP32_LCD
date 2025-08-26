@@ -14,7 +14,9 @@ void temperature_sensor_init(void) {
     if (USE_SENSOR_DS18B20 )
     {
         DS18B20.begin();
-        // DS18B20.setWaitForConversion(false);    // 设置为非阻塞式
+        DS18B20.setResolution(12); // 设置分辨率为12位（0.0625度）
+        DS18B20.setWaitForConversion(false);    // 设置为非阻塞式
+        DS18B20.requestTemperatures(); // ☆关键：发起第一次温度转换
     }
     if (USE_SENSOR_SHT40)
     {
@@ -38,10 +40,12 @@ bool temperature_sensor_read_loop(float *t, float *h) {
     bool ret = false;
 
     if (USE_SENSOR_DS18B20) {
-        DS18B20.requestTemperatures();  // 发起新的温度转换
-        *t = DS18B20.getTempCByIndex(0);  // 读取前一次的温度
-        if (*t != DEVICE_DISCONNECTED_C) {
-            ret = true;
+        if (DS18B20.isConversionComplete()) {
+            *t = DS18B20.getTempCByIndex(0);  // 读取前一次的温度
+            if (*t != DEVICE_DISCONNECTED_C) {
+                ret = true;
+            }
+            DS18B20.requestTemperatures();  // 发起新的温度转换
         }
     }
 

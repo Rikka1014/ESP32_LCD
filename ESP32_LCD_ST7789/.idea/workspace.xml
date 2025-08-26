@@ -22,10 +22,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 温控输出口测试正常（继电器式）">
+    <list default="true" id="f8f35f36-c13e-4aa1-a873-0f00a4bb6f6a" name="更改" comment="fix: 输出口1改为PWM">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/PowerSwitch/power_switch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Temperature/temperature_sensor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -891,7 +891,7 @@
       <workItem from="1755661094527" duration="7441000" />
       <workItem from="1755688426774" duration="1767000" />
       <workItem from="1756089647248" duration="11906000" />
-      <workItem from="1756178665530" duration="8896000" />
+      <workItem from="1756178665530" duration="11506000" />
     </task>
     <task id="LOCAL-00001" summary="creat: Adafruit_ST7789显示demo,正常">
       <option name="closed" value="true" />
@@ -1181,7 +1181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756190380184</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="fix: 输出口1改为PWM">
+      <option name="closed" value="true" />
+      <created>1756195043862</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1756195043862</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1211,7 +1219,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bug: 无法通过键盘切换页面" />
     <MESSAGE value="bug: 实体按键绑定屏幕按钮实现页面切换" />
     <MESSAGE value="fix: 按键可以正常触发事件。Group需要在任何实体输入设备/屏幕组件加入它之前就初始化创建好☆" />
     <MESSAGE value="fix: 实体按键触发屏幕切换" />
@@ -1236,6 +1243,7 @@
     <MESSAGE value="fix: 更正加热和冷却UI显示逻辑" />
     <MESSAGE value="fix: 增加了按键声音" />
     <MESSAGE value="fix: 温控输出口测试正常（继电器式）" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: 温控输出口测试正常（继电器式）" />
+    <MESSAGE value="fix: 输出口1改为PWM" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: 输出口1改为PWM" />
   </component>
 </project>

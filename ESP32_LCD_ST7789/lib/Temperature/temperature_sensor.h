@@ -14,8 +14,8 @@ extern "C" {
 #define SHT40_SCL_PIN 19
 #define SHT40_SDA_PIN 45
 
-#define USE_SENSOR_DS18B20  0   // 使用DS18B20传感器
-#define USE_SENSOR_SHT40    1   // 使用SHT40传感器
+#define USE_SENSOR_DS18B20  1   // 使用DS18B20传感器
+#define USE_SENSOR_SHT40    0   // 使用SHT40传感器
 
 void temperature_sensor_init(void);
 bool temperature_sensor_read_loop(float *t, float *h);

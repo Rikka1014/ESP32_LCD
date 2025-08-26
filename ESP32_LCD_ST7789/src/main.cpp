@@ -79,13 +79,14 @@ void temperature_task(void *pvParameters) {
         if (state_now != state_prev) {
             // 更新设备状态UI
             my_ui_update_devive_state(state_now);
+
             // 根据状态控制12V输出和蜂鸣器
             if (state_now == DEVICE_STATE_HEAT) {
                 Buzzer_Tone(1800, 100);
                 power_switch_set_out1_pwm(50); // 打开12V输出1，80%功率
             } else if (state_now == DEVICE_STATE_COOL) {
                 Buzzer_Tone(1800, 100);
-                power_switch_set_out1_pwm(10); // 打开12V输出1，100%功率
+                power_switch_set_out1_pwm(0); // 打开12V输出1，100%功率
             } else {
                 Buzzer_Tone(1800, 100);
                 power_switch_set_out1_pwm(0);   // 关闭12V输出1
@@ -94,7 +95,7 @@ void temperature_task(void *pvParameters) {
             state_prev = state_now; // 更新上一次状态
         }
 
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
 
